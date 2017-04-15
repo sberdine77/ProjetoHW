@@ -1,0 +1,16 @@
+|dataPath
+clock => clock.IN1
+res => res.IN1
+
+
+|dataPath|unidadeControle:unidadeControle
+clk => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+memRead <= aluControl[0].DB_MAX_OUTPUT_PORT_TYPE
+memWrite <= <GND>
+pcControl <= aluControl[0].DB_MAX_OUTPUT_PORT_TYPE
+aluControl[0] <= aluControl[0].DB_MAX_OUTPUT_PORT_TYPE
+aluControl[1] <= <GND>
+aluControl[2] <= <GND>
+
+
