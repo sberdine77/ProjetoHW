@@ -1,5 +1,5 @@
 Fitter report for projetoHardware
-Sun Apr 16 20:31:21 2017
+Mon Apr 17 18:14:01 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Sun Apr 16 20:31:21 2017        ;
+; Fitter Status                      ; Successful - Mon Apr 17 18:14:01 2017        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; projetoHardware                              ;
 ; Top-level Entity Name              ; dataPath                                     ;
@@ -73,7 +73,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 78 / 68,416 ( < 1 % )                        ;
 ;     Dedicated logic registers      ; 34 / 68,416 ( < 1 % )                        ;
 ; Total registers                    ; 34                                           ;
-; Total pins                         ; 103 / 622 ( 17 % )                           ;
+; Total pins                         ; 104 / 622 ( 17 % )                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 8,192 / 1,152,000 ( < 1 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 0 / 300 ( 0 % )                              ;
@@ -151,8 +151,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                    ; Value              ;
 +-------------------------+--------------------+
 ; Placement               ;                    ;
-;     -- Requested        ; 0 / 251 ( 0.00 % ) ;
-;     -- Achieved         ; 0 / 251 ( 0.00 % ) ;
+;     -- Requested        ; 0 / 252 ( 0.00 % ) ;
+;     -- Achieved         ; 0 / 252 ( 0.00 % ) ;
 ;                         ;                    ;
 ; Routing (by Connection) ;                    ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )   ;
@@ -174,7 +174,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 251     ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 252     ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
@@ -211,7 +211,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; Total LABs:  partially or completely used   ; 6 / 4,276 ( < 1 % )                         ;
 ; User inserted logic elements                ; 0                                           ;
 ; Virtual pins                                ; 0                                           ;
-; I/O pins                                    ; 103 / 622 ( 17 % )                          ;
+; I/O pins                                    ; 104 / 622 ( 17 % )                          ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )                              ;
 ; Global signals                              ; 2                                           ;
 ; M4Ks                                        ; 4 / 250 ( 2 % )                             ;
@@ -224,13 +224,13 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )                               ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )                               ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                                ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%                                ;
+; Peak interconnect usage (total/H/V)         ; 1% / 2% / 1%                                ;
 ; Maximum fan-out node                        ; unidadeControle:unidadeControle|state.Reset ;
 ; Maximum fan-out                             ; 59                                          ;
 ; Highest non-global fan-out signal           ; unidadeControle:unidadeControle|state.Reset ;
 ; Highest non-global fan-out                  ; 59                                          ;
 ; Total fan-out                               ; 517                                         ;
-; Average fan-out                             ; 2.30                                        ;
+; Average fan-out                             ; 2.29                                        ;
 +---------------------------------------------+---------------------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -251,107 +251,108 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name              ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; AluOutOut[0]      ; AE16  ; 7        ; 51           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[10]     ; D22   ; 4        ; 76           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[11]     ; A25   ; 4        ; 80           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[12]     ; C21   ; 4        ; 74           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[13]     ; H19   ; 4        ; 74           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[14]     ; G19   ; 4        ; 76           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[15]     ; A24   ; 4        ; 78           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[16]     ; D24   ; 4        ; 82           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[17]     ; C22   ; 4        ; 76           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[18]     ; E29   ; 5        ; 95           ; 45           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[19]     ; D23   ; 4        ; 78           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[1]      ; AB23  ; 6        ; 95           ; 2            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[20]     ; H28   ; 5        ; 95           ; 44           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[21]     ; H26   ; 5        ; 95           ; 43           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[22]     ; D27   ; 4        ; 91           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[23]     ; C27   ; 4        ; 89           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[24]     ; G24   ; 5        ; 95           ; 49           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[25]     ; G28   ; 5        ; 95           ; 44           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[26]     ; F29   ; 5        ; 95           ; 43           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[27]     ; B29   ; 4        ; 91           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[28]     ; D26   ; 4        ; 91           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[29]     ; B27   ; 4        ; 87           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[2]      ; G22   ; 4        ; 93           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[30]     ; F23   ; 4        ; 93           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[31]     ; E24   ; 4        ; 93           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[3]      ; A26   ; 4        ; 85           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[4]      ; C26   ; 4        ; 85           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[5]      ; B26   ; 4        ; 85           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[6]      ; J24   ; 5        ; 95           ; 47           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[7]      ; E28   ; 5        ; 95           ; 47           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[8]      ; E23   ; 4        ; 85           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; AluOutOut[9]      ; B25   ; 4        ; 82           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[0]  ; D19   ; 4        ; 65           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[10] ; A19   ; 4        ; 58           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[11] ; C18   ; 4        ; 58           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[12] ; A21   ; 4        ; 67           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[13] ; E19   ; 4        ; 67           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[14] ; F18   ; 4        ; 60           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[15] ; B18   ; 4        ; 58           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[16] ; D18   ; 4        ; 60           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[17] ; C19   ; 4        ; 65           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[18] ; A20   ; 4        ; 62           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[19] ; E17   ; 4        ; 56           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[1]  ; B20   ; 4        ; 62           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[20] ; G18   ; 4        ; 60           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[21] ; C16   ; 4        ; 49           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[22] ; H16   ; 4        ; 49           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[23] ; A17   ; 4        ; 56           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[0]      ; AF15  ; 8        ; 42           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[10]     ; J24   ; 5        ; 95           ; 47           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[11]     ; D22   ; 4        ; 76           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[12]     ; E19   ; 4        ; 67           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[13]     ; A14   ; 3        ; 42           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[14]     ; C16   ; 4        ; 49           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[15]     ; C15   ; 3        ; 44           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[16]     ; D28   ; 5        ; 95           ; 46           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[17]     ; J18   ; 4        ; 65           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[18]     ; E15   ; 3        ; 44           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[19]     ; F20   ; 4        ; 69           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[1]      ; AF16  ; 7        ; 56           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[20]     ; E20   ; 4        ; 69           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[21]     ; B22   ; 4        ; 71           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[22]     ; C29   ; 5        ; 95           ; 45           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[23]     ; A22   ; 4        ; 71           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[24]     ; C30   ; 5        ; 95           ; 45           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[25]     ; F19   ; 4        ; 67           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[26]     ; H16   ; 4        ; 49           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[27]     ; H28   ; 5        ; 95           ; 44           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[28]     ; H19   ; 4        ; 74           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[29]     ; E27   ; 5        ; 95           ; 47           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[2]      ; B26   ; 4        ; 85           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[30]     ; E30   ; 5        ; 95           ; 45           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[31]     ; E28   ; 5        ; 95           ; 47           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[3]      ; B25   ; 4        ; 82           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[4]      ; G26   ; 5        ; 95           ; 48           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[5]      ; G25   ; 5        ; 95           ; 48           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[6]      ; B23   ; 4        ; 78           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[7]      ; A25   ; 4        ; 80           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[8]      ; F28   ; 5        ; 95           ; 48           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; AluOutOut[9]      ; G20   ; 4        ; 80           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; IRWrite           ; AH17  ; 7        ; 56           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[0]  ; B29   ; 4        ; 91           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[10] ; F18   ; 4        ; 60           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[11] ; B17   ; 4        ; 56           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[12] ; G16   ; 4        ; 51           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[13] ; D17   ; 4        ; 53           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[14] ; C18   ; 4        ; 58           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[15] ; A19   ; 4        ; 58           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[16] ; A28   ; 4        ; 89           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[17] ; E24   ; 4        ; 93           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[18] ; J25   ; 5        ; 95           ; 47           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[19] ; H21   ; 4        ; 87           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[1]  ; G28   ; 5        ; 95           ; 44           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[20] ; G21   ; 4        ; 87           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[21] ; D26   ; 4        ; 91           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[22] ; B28   ; 4        ; 89           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[23] ; F27   ; 5        ; 95           ; 46           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; MemDataOutOut[24] ; G17   ; 4        ; 53           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[25] ; B16   ; 4        ; 49           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[26] ; G16   ; 4        ; 51           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[27] ; B19   ; 4        ; 58           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[28] ; H17   ; 4        ; 53           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[29] ; C17   ; 4        ; 51           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[2]  ; H18   ; 4        ; 65           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[30] ; F16   ; 4        ; 51           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[31] ; B21   ; 4        ; 69           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[3]  ; F19   ; 4        ; 67           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[4]  ; B15   ; 3        ; 44           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[5]  ; F20   ; 4        ; 69           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[6]  ; B17   ; 4        ; 56           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[7]  ; E15   ; 3        ; 44           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[8]  ; J18   ; 4        ; 65           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MemDataOutOut[9]  ; D17   ; 4        ; 53           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCControlOut      ; F27   ; 5        ; 95           ; 46           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[0]          ; AD22  ; 7        ; 85           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[10]         ; H24   ; 5        ; 95           ; 49           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[11]         ; E27   ; 5        ; 95           ; 47           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[12]         ; C24   ; 4        ; 78           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[13]         ; B23   ; 4        ; 78           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[14]         ; C29   ; 5        ; 95           ; 45           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[15]         ; E22   ; 4        ; 82           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[16]         ; D25   ; 4        ; 82           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[17]         ; H21   ; 4        ; 87           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[18]         ; H20   ; 4        ; 80           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[19]         ; J25   ; 5        ; 95           ; 47           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[1]          ; AJ18  ; 7        ; 60           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[20]         ; B24   ; 4        ; 80           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[21]         ; D28   ; 5        ; 95           ; 46           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[22]         ; B28   ; 4        ; 89           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[23]         ; G21   ; 4        ; 87           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[24]         ; E30   ; 5        ; 95           ; 45           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[25]         ; G26   ; 5        ; 95           ; 48           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[26]         ; D29   ; 5        ; 95           ; 46           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[27]         ; G25   ; 5        ; 95           ; 48           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[28]         ; C28   ; 4        ; 91           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[29]         ; H27   ; 5        ; 95           ; 44           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[2]          ; D21   ; 4        ; 71           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[30]         ; A28   ; 4        ; 89           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[31]         ; G20   ; 4        ; 80           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[3]          ; J19   ; 4        ; 74           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[4]          ; E21   ; 4        ; 71           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[5]          ; E20   ; 4        ; 69           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[6]          ; B22   ; 4        ; 71           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[7]          ; A22   ; 4        ; 71           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[8]          ; C30   ; 5        ; 95           ; 45           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; PCOut[9]          ; F28   ; 5        ; 95           ; 48           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; StateOut[0]       ; G27   ; 5        ; 95           ; 44           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; StateOut[1]       ; A23   ; 4        ; 76           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; StateOut[2]       ; AC16  ; 7        ; 53           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; WriteOrReadOut    ; E2    ; 2        ; 0            ; 40           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[25] ; C17   ; 4        ; 51           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[26] ; G18   ; 4        ; 60           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[27] ; B18   ; 4        ; 58           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[28] ; E17   ; 4        ; 56           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[29] ; B15   ; 3        ; 44           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[2]  ; G27   ; 5        ; 95           ; 44           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[30] ; H17   ; 4        ; 53           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[31] ; A17   ; 4        ; 56           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[3]  ; B27   ; 4        ; 87           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[4]  ; D27   ; 4        ; 91           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[5]  ; C27   ; 4        ; 89           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[6]  ; E29   ; 5        ; 95           ; 45           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[7]  ; C28   ; 4        ; 91           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[8]  ; D18   ; 4        ; 60           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MemDataOutOut[9]  ; B19   ; 4        ; 58           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCControlOut      ; C24   ; 4        ; 78           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[0]          ; K23   ; 5        ; 95           ; 41           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[10]         ; E23   ; 4        ; 85           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[11]         ; B24   ; 4        ; 80           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[12]         ; D24   ; 4        ; 82           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[13]         ; D23   ; 4        ; 78           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[14]         ; G24   ; 5        ; 95           ; 49           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[15]         ; B21   ; 4        ; 69           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[16]         ; H23   ; 5        ; 95           ; 49           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[17]         ; E21   ; 4        ; 71           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[18]         ; H25   ; 5        ; 95           ; 49           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[19]         ; H24   ; 5        ; 95           ; 49           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[1]          ; AJ3   ; 8        ; 5            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[20]         ; D21   ; 4        ; 71           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[21]         ; C21   ; 4        ; 74           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[22]         ; G19   ; 4        ; 76           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[23]         ; H27   ; 5        ; 95           ; 44           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[24]         ; A24   ; 4        ; 78           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[25]         ; A21   ; 4        ; 67           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[26]         ; C22   ; 4        ; 76           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[27]         ; J19   ; 4        ; 74           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[28]         ; F16   ; 4        ; 51           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[29]         ; D25   ; 4        ; 82           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[2]          ; C19   ; 4        ; 65           ; 51           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[30]         ; A23   ; 4        ; 76           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[31]         ; C26   ; 4        ; 85           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[3]          ; A20   ; 4        ; 62           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[4]          ; D19   ; 4        ; 65           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[5]          ; E22   ; 4        ; 82           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[6]          ; H18   ; 4        ; 65           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[7]          ; B20   ; 4        ; 62           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[8]          ; A26   ; 4        ; 85           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; PCOut[9]          ; H20   ; 4        ; 80           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; StateOut[0]       ; B16   ; 4        ; 49           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; StateOut[1]       ; D29   ; 5        ; 95           ; 46           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; StateOut[2]       ; N9    ; 2        ; 0            ; 34           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; WriteOrReadOut    ; AB13  ; 8        ; 35           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -362,12 +363,12 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 +----------+------------------+---------------+--------------+
 ; 1        ; 2 / 85 ( 2 % )   ; 3.3V          ; --           ;
 ; 2        ; 3 / 79 ( 4 % )   ; 3.3V          ; --           ;
-; 3        ; 2 / 72 ( 3 % )   ; 3.3V          ; --           ;
-; 4        ; 71 / 74 ( 96 % ) ; 3.3V          ; --           ;
-; 5        ; 22 / 85 ( 26 % ) ; 3.3V          ; --           ;
-; 6        ; 2 / 81 ( 2 % )   ; 3.3V          ; --           ;
-; 7        ; 4 / 74 ( 5 % )   ; 3.3V          ; --           ;
-; 8        ; 0 / 72 ( 0 % )   ; 3.3V          ; --           ;
+; 3        ; 4 / 72 ( 6 % )   ; 3.3V          ; --           ;
+; 4        ; 69 / 74 ( 93 % ) ; 3.3V          ; --           ;
+; 5        ; 23 / 85 ( 27 % ) ; 3.3V          ; --           ;
+; 6        ; 1 / 81 ( 1 % )   ; 3.3V          ; --           ;
+; 7        ; 2 / 74 ( 3 % )   ; 3.3V          ; --           ;
+; 8        ; 3 / 72 ( 4 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -388,21 +389,21 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; A11      ; 586        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A12      ; 578        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; A14      ; 569        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A14      ; 569        ; 3        ; AluOutOut[13]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A15      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; A17      ; 549        ; 4        ; MemDataOutOut[23]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A17      ; 549        ; 4        ; MemDataOutOut[31]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A18      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; A19      ; 545        ; 4        ; MemDataOutOut[10]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A20      ; 540        ; 4        ; MemDataOutOut[18]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A21      ; 532        ; 4        ; MemDataOutOut[12]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A22      ; 528        ; 4        ; PCOut[7]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A23      ; 518        ; 4        ; StateOut[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A24      ; 514        ; 4        ; AluOutOut[15]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A25      ; 510        ; 4        ; AluOutOut[11]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A26      ; 503        ; 4        ; AluOutOut[3]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A19      ; 545        ; 4        ; MemDataOutOut[15]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A20      ; 540        ; 4        ; PCOut[3]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A21      ; 532        ; 4        ; PCOut[25]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A22      ; 528        ; 4        ; AluOutOut[23]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A23      ; 518        ; 4        ; PCOut[30]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A24      ; 514        ; 4        ; PCOut[24]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A25      ; 510        ; 4        ; AluOutOut[7]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A26      ; 503        ; 4        ; PCOut[8]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A27      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; A28      ; 497        ; 4        ; PCOut[30]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A28      ; 497        ; 4        ; MemDataOutOut[16]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A29      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA1      ; 120        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA2      ; 121        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -446,7 +447,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; AB10     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB12     ; 218        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AB13     ; 224        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AB13     ; 224        ; 8        ; WriteOrReadOut                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AB14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB15     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -456,7 +457,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; AB20     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB21     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB22     ;            ;          ; VCCD_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; AB23     ; 318        ; 6        ; AluOutOut[1]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AB23     ; 318        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB24     ; 323        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB25     ; 341        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB26     ; 342        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -479,7 +480,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; AC13     ; 223        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC14     ; 231        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC15     ; 245        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AC16     ; 250        ; 7        ; StateOut[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC16     ; 250        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC17     ; 259        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC18     ; 272        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC19     ; 282        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -515,7 +516,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; AD19     ; 281        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD20     ; 294        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD21     ; 306        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD22     ; 301        ; 7        ; PCOut[0]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD22     ; 301        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD23     ;            ;          ; GNDA_PLL4                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AD24     ; 319        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD25     ; 320        ; 6        ; ~LVDS195p/nCEO~                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
@@ -539,7 +540,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; AE13     ; 221        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AE15     ; 235        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE16     ; 248        ; 7        ; AluOutOut[0]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE16     ; 248        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE17     ; 255        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE18     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AE19     ; 284        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -568,8 +569,8 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; AF12     ; 217        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF13     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF14     ; 233        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF15     ; 234        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF16     ; 252        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF15     ; 234        ; 8        ; AluOutOut[0]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF16     ; 252        ; 7        ; AluOutOut[1]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF17     ; 264        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF18     ; 269        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF19     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -630,7 +631,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; AH14     ; 243        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AH15     ; 241        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH16     ; 247        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AH17     ; 253        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AH17     ; 253        ; 7        ; IRWrite                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AH18     ; 261        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH19     ; 267        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH20     ; 283        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -646,7 +647,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; AH30     ; 334        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AJ1      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AJ2      ; 176        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AJ3      ; 179        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AJ3      ; 179        ; 8        ; PCOut[1]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AJ4      ; 184        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ5      ; 187        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ6      ; 194        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -661,7 +662,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; AJ15     ; 240        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ16     ; 246        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ17     ; 257        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AJ18     ; 260        ; 7        ; PCOut[1]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AJ18     ; 260        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ19     ; 263        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ20     ; 266        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ21     ; 274        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -716,21 +717,21 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; B12      ; 577        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ; 573        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B14      ; 568        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B15      ; 565        ; 3        ; MemDataOutOut[4]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B16      ; 559        ; 4        ; MemDataOutOut[25]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B17      ; 548        ; 4        ; MemDataOutOut[6]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B18      ; 547        ; 4        ; MemDataOutOut[15]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B19      ; 544        ; 4        ; MemDataOutOut[27]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B20      ; 539        ; 4        ; MemDataOutOut[1]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B21      ; 531        ; 4        ; MemDataOutOut[31]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B22      ; 527        ; 4        ; PCOut[6]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B23      ; 517        ; 4        ; PCOut[13]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B24      ; 513        ; 4        ; PCOut[20]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B25      ; 509        ; 4        ; AluOutOut[9]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B26      ; 502        ; 4        ; AluOutOut[5]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B27      ; 499        ; 4        ; AluOutOut[29]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B28      ; 496        ; 4        ; PCOut[22]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B29      ; 493        ; 4        ; AluOutOut[27]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B15      ; 565        ; 3        ; MemDataOutOut[29]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B16      ; 559        ; 4        ; StateOut[0]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B17      ; 548        ; 4        ; MemDataOutOut[11]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B18      ; 547        ; 4        ; MemDataOutOut[27]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B19      ; 544        ; 4        ; MemDataOutOut[9]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B20      ; 539        ; 4        ; PCOut[7]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B21      ; 531        ; 4        ; PCOut[15]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B22      ; 527        ; 4        ; AluOutOut[21]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B23      ; 517        ; 4        ; AluOutOut[6]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B24      ; 513        ; 4        ; PCOut[11]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B25      ; 509        ; 4        ; AluOutOut[3]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B26      ; 502        ; 4        ; AluOutOut[2]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B27      ; 499        ; 4        ; MemDataOutOut[3]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B28      ; 496        ; 4        ; MemDataOutOut[22]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B29      ; 493        ; 4        ; MemDataOutOut[0]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B30      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C1       ; 16         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C2       ; 17         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -746,22 +747,22 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; C12      ; 584        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C13      ; 572        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C14      ; 575        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C15      ; 564        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C16      ; 558        ; 4        ; MemDataOutOut[21]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C17      ; 554        ; 4        ; MemDataOutOut[29]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C18      ; 546        ; 4        ; MemDataOutOut[11]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C19      ; 538        ; 4        ; MemDataOutOut[17]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C15      ; 564        ; 3        ; AluOutOut[15]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C16      ; 558        ; 4        ; AluOutOut[14]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C17      ; 554        ; 4        ; MemDataOutOut[25]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C18      ; 546        ; 4        ; MemDataOutOut[14]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C19      ; 538        ; 4        ; PCOut[2]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C20      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C21      ; 522        ; 4        ; AluOutOut[12]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C22      ; 520        ; 4        ; AluOutOut[17]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C21      ; 522        ; 4        ; PCOut[21]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C22      ; 520        ; 4        ; PCOut[26]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C23      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C24      ; 516        ; 4        ; PCOut[12]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C24      ; 516        ; 4        ; PCControlOut                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C25      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C26      ; 504        ; 4        ; AluOutOut[4]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C27      ; 498        ; 4        ; AluOutOut[23]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C28      ; 492        ; 4        ; PCOut[28]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C29      ; 473        ; 5        ; PCOut[14]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; C30      ; 472        ; 5        ; PCOut[8]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C26      ; 504        ; 4        ; PCOut[31]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C27      ; 498        ; 4        ; MemDataOutOut[5]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C28      ; 492        ; 4        ; MemDataOutOut[7]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C29      ; 473        ; 5        ; AluOutOut[22]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C30      ; 472        ; 5        ; AluOutOut[24]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; D2       ; 18         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D3       ; 19         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -778,22 +779,22 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; D14      ; 571        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D15      ; 567        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 561        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; D17      ; 553        ; 4        ; MemDataOutOut[9]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D18      ; 541        ; 4        ; MemDataOutOut[16]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D19      ; 537        ; 4        ; MemDataOutOut[0]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D17      ; 553        ; 4        ; MemDataOutOut[13]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D18      ; 541        ; 4        ; MemDataOutOut[8]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D19      ; 537        ; 4        ; PCOut[4]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D21      ; 526        ; 4        ; PCOut[2]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D22      ; 519        ; 4        ; AluOutOut[10]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D23      ; 515        ; 4        ; AluOutOut[19]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D24      ; 508        ; 4        ; AluOutOut[16]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D25      ; 507        ; 4        ; PCOut[16]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D26      ; 494        ; 4        ; AluOutOut[28]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D27      ; 495        ; 4        ; AluOutOut[22]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; D28      ; 475        ; 5        ; PCOut[21]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; D29      ; 474        ; 5        ; PCOut[26]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D21      ; 526        ; 4        ; PCOut[20]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D22      ; 519        ; 4        ; AluOutOut[11]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D23      ; 515        ; 4        ; PCOut[13]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D24      ; 508        ; 4        ; PCOut[12]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D25      ; 507        ; 4        ; PCOut[29]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D26      ; 494        ; 4        ; MemDataOutOut[21]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D27      ; 495        ; 4        ; MemDataOutOut[4]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D28      ; 475        ; 5        ; AluOutOut[16]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D29      ; 474        ; 5        ; StateOut[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D30      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E1       ; 37         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E2       ; 38         ; 2        ; WriteOrReadOut                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E2       ; 38         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E3       ; 12         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E4       ; 13         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -806,22 +807,22 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; E12      ; 589        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E13      ; 579        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E14      ; 570        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; E15      ; 566        ; 3        ; MemDataOutOut[7]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E15      ; 566        ; 3        ; AluOutOut[18]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E16      ; 560        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; E17      ; 550        ; 4        ; MemDataOutOut[19]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E17      ; 550        ; 4        ; MemDataOutOut[28]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E18      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; E19      ; 534        ; 4        ; MemDataOutOut[13]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; E20      ; 530        ; 4        ; PCOut[5]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; E21      ; 525        ; 4        ; PCOut[4]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; E22      ; 506        ; 4        ; PCOut[15]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; E23      ; 505        ; 4        ; AluOutOut[8]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; E24      ; 490        ; 4        ; AluOutOut[31]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E19      ; 534        ; 4        ; AluOutOut[12]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E20      ; 530        ; 4        ; AluOutOut[20]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E21      ; 525        ; 4        ; PCOut[17]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E22      ; 506        ; 4        ; PCOut[5]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E23      ; 505        ; 4        ; PCOut[10]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E24      ; 490        ; 4        ; MemDataOutOut[17]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E25      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; E27      ; 478        ; 5        ; PCOut[11]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; E28      ; 477        ; 5        ; AluOutOut[7]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; E29      ; 470        ; 5        ; AluOutOut[18]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; E30      ; 471        ; 5        ; PCOut[24]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E27      ; 478        ; 5        ; AluOutOut[29]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E28      ; 477        ; 5        ; AluOutOut[31]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E29      ; 470        ; 5        ; MemDataOutOut[6]                         ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E30      ; 471        ; 5        ; AluOutOut[30]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F1       ; 39         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 40         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F3       ; 6          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -837,20 +838,20 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; F13      ; 580        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F15      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; F16      ; 556        ; 4        ; MemDataOutOut[30]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F16      ; 556        ; 4        ; PCOut[28]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F18      ; 543        ; 4        ; MemDataOutOut[14]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F19      ; 533        ; 4        ; MemDataOutOut[3]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F20      ; 529        ; 4        ; MemDataOutOut[5]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F18      ; 543        ; 4        ; MemDataOutOut[10]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F19      ; 533        ; 4        ; AluOutOut[25]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F20      ; 529        ; 4        ; AluOutOut[19]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F21      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; F22      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F23      ; 488        ; 4        ; AluOutOut[30]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F23      ; 488        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F24      ; 491        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F25      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F26      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; F27      ; 476        ; 5        ; PCControlOut                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F28      ; 481        ; 5        ; PCOut[9]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F29      ; 463        ; 5        ; AluOutOut[26]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F27      ; 476        ; 5        ; MemDataOutOut[23]                        ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F28      ; 481        ; 5        ; AluOutOut[8]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F29      ; 463        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F30      ; 464        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G1       ; 41         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G2       ; 42         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -867,19 +868,19 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; G13      ; 582        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G14      ; 576        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G15      ; 562        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; G16      ; 555        ; 4        ; MemDataOutOut[26]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G16      ; 555        ; 4        ; MemDataOutOut[12]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G17      ; 551        ; 4        ; MemDataOutOut[24]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G18      ; 542        ; 4        ; MemDataOutOut[20]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G19      ; 521        ; 4        ; AluOutOut[14]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G20      ; 511        ; 4        ; PCOut[31]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G21      ; 500        ; 4        ; PCOut[23]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G22      ; 489        ; 4        ; AluOutOut[2]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G18      ; 542        ; 4        ; MemDataOutOut[26]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G19      ; 521        ; 4        ; PCOut[22]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G20      ; 511        ; 4        ; AluOutOut[9]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G21      ; 500        ; 4        ; MemDataOutOut[20]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G22      ; 489        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G23      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; G24      ; 486        ; 5        ; AluOutOut[24]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G25      ; 482        ; 5        ; PCOut[27]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G26      ; 483        ; 5        ; PCOut[25]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G27      ; 468        ; 5        ; StateOut[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G28      ; 469        ; 5        ; AluOutOut[25]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G24      ; 486        ; 5        ; PCOut[14]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G25      ; 482        ; 5        ; AluOutOut[5]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G26      ; 483        ; 5        ; AluOutOut[4]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G27      ; 468        ; 5        ; MemDataOutOut[2]                         ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G28      ; 469        ; 5        ; MemDataOutOut[1]                         ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G29      ; 458        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G30      ; 459        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H1       ; 43         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -897,19 +898,19 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; H13      ; 587        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H14      ; 574        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H15      ; 563        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; H16      ; 557        ; 4        ; MemDataOutOut[22]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H17      ; 552        ; 4        ; MemDataOutOut[28]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H18      ; 535        ; 4        ; MemDataOutOut[2]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H19      ; 524        ; 4        ; AluOutOut[13]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H20      ; 512        ; 4        ; PCOut[18]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H21      ; 501        ; 4        ; PCOut[17]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H16      ; 557        ; 4        ; AluOutOut[26]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H17      ; 552        ; 4        ; MemDataOutOut[30]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H18      ; 535        ; 4        ; PCOut[6]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H19      ; 524        ; 4        ; AluOutOut[28]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H20      ; 512        ; 4        ; PCOut[9]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H21      ; 501        ; 4        ; MemDataOutOut[19]                        ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H22      ;            ;          ; VCCA_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; H23      ; 487        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H24      ; 485        ; 5        ; PCOut[10]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H25      ; 484        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H26      ; 465        ; 5        ; AluOutOut[21]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H27      ; 466        ; 5        ; PCOut[29]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; H28      ; 467        ; 5        ; AluOutOut[20]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H23      ; 487        ; 5        ; PCOut[16]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H24      ; 485        ; 5        ; PCOut[19]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H25      ; 484        ; 5        ; PCOut[18]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H26      ; 465        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H27      ; 466        ; 5        ; PCOut[23]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H28      ; 467        ; 5        ; AluOutOut[27]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H29      ; 453        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H30      ; 454        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J1       ; 51         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -929,14 +930,14 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; J15      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; J18      ; 536        ; 4        ; MemDataOutOut[8]                         ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; J19      ; 523        ; 4        ; PCOut[3]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J18      ; 536        ; 4        ; AluOutOut[17]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J19      ; 523        ; 4        ; PCOut[27]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; J20      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J21      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J22      ;            ;          ; VCCD_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J23      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; J24      ; 480        ; 5        ; AluOutOut[6]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; J25      ; 479        ; 5        ; PCOut[19]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J24      ; 480        ; 5        ; AluOutOut[10]                            ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J25      ; 479        ; 5        ; MemDataOutOut[18]                        ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J26      ; 460        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J27      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; J28      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -964,7 +965,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; K20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K21      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K22      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; K23      ; 455        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K23      ; 455        ; 5        ; PCOut[0]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K24      ; 461        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K25      ; 462        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K26      ; 452        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1040,7 +1041,7 @@ The pin-out file can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHard
 ; N6       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N7       ; 59         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N8       ; 58         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; N9       ; 63         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N9       ; 63         ; 2        ; StateOut[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N10      ; 47         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N12      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -1318,7 +1319,7 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                 ; Library Name ;
 +-------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------+--------------+
-; |dataPath                                       ; 79 (1)      ; 34 (0)                    ; 0 (0)         ; 8192        ; 4    ; 0            ; 0       ; 0         ; 103  ; 0            ; 45 (1)       ; 1 (0)             ; 33 (0)           ; |dataPath                                                                                                           ; work         ;
+; |dataPath                                       ; 79 (1)      ; 34 (0)                    ; 0 (0)         ; 8192        ; 4    ; 0            ; 0       ; 0         ; 104  ; 0            ; 45 (1)       ; 1 (0)             ; 33 (0)           ; |dataPath                                                                                                           ; work         ;
 ;    |Memoria:Memoria|                            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 8192        ; 4    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|Memoria:Memoria                                                                                           ; work         ;
 ;       |lpm_ram_dq:MEM_plus_One|                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 2048        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
 ;          |altram:sram|                          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 2048        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
@@ -1449,6 +1450,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; StateOut[2]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; WriteOrReadOut    ; Output   ; --            ; --            ; --                    ; --  ;
 ; PCControlOut      ; Output   ; --            ; --            ; --                    ; --  ;
+; IRWrite           ; Output   ; --            ; --            ; --                    ; --  ;
 ; clock             ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
 ; res               ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
 +-------------------+----------+---------------+---------------+-----------------------+-----+
@@ -1464,15 +1466,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                          ;
-+-----------------------------------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                          ; Location         ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; clock                                         ; PIN_T2           ; 38      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; res                                           ; PIN_T3           ; 34      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; unidadeControle:unidadeControle|state.PCWrite ; LCFF_X85_Y47_N11 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+-----------------------------------------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                         ;
++-----------------------------------------------+-----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                          ; Location        ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------+-----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; clock                                         ; PIN_T2          ; 38      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; res                                           ; PIN_T3          ; 34      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; unidadeControle:unidadeControle|state.PCWrite ; LCFF_X77_Y49_N5 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------------+-----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -1548,8 +1550,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------+------+-------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------+-------------+
 ; Name                                                                                                                 ; Type ; Mode        ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF            ; Location    ;
 +----------------------------------------------------------------------------------------------------------------------+------+-------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------+-------------+
-; Memoria:Memoria|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; Dual Clocks ; 256          ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 2048 ; 256                         ; 8                           ; --                          ; --                          ; 2048                ; 1    ; instrucoes.mif ; M4K_X64_Y48 ;
-; Memoria:Memoria|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; Dual Clocks ; 256          ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 2048 ; 256                         ; 8                           ; --                          ; --                          ; 2048                ; 1    ; instrucoes.mif ; M4K_X64_Y47 ;
+; Memoria:Memoria|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; Dual Clocks ; 256          ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 2048 ; 256                         ; 8                           ; --                          ; --                          ; 2048                ; 1    ; instrucoes.mif ; M4K_X84_Y50 ;
+; Memoria:Memoria|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; Dual Clocks ; 256          ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 2048 ; 256                         ; 8                           ; --                          ; --                          ; 2048                ; 1    ; instrucoes.mif ; M4K_X84_Y49 ;
 ; Memoria:Memoria|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; Dual Clocks ; 256          ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 2048 ; 256                         ; 8                           ; --                          ; --                          ; 2048                ; 1    ; instrucoes.mif ; M4K_X64_Y50 ;
 ; Memoria:Memoria|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM            ; AUTO ; Single Port ; Dual Clocks ; 256          ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 2048 ; 256                         ; 8                           ; --                          ; --                          ; 2048                ; 1    ; instrucoes.mif ; M4K_X64_Y49 ;
 +----------------------------------------------------------------------------------------------------------------------+------+-------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------+-------------+
@@ -1561,14 +1563,14 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------------+-------------------------+
 ; Interconnect Resource Type ; Usage                   ;
 +----------------------------+-------------------------+
-; Block interconnects        ; 221 / 197,592 ( < 1 % ) ;
+; Block interconnects        ; 231 / 197,592 ( < 1 % ) ;
 ; C16 interconnects          ; 0 / 6,270 ( 0 % )       ;
-; C4 interconnects           ; 119 / 123,120 ( < 1 % ) ;
-; Direct links               ; 39 / 197,592 ( < 1 % )  ;
+; C4 interconnects           ; 128 / 123,120 ( < 1 % ) ;
+; Direct links               ; 46 / 197,592 ( < 1 % )  ;
 ; Global clocks              ; 2 / 16 ( 13 % )         ;
-; Local interconnects        ; 54 / 68,416 ( < 1 % )   ;
-; R24 interconnects          ; 3 / 5,926 ( < 1 % )     ;
-; R4 interconnects           ; 245 / 167,484 ( < 1 % ) ;
+; Local interconnects        ; 48 / 68,416 ( < 1 % )   ;
+; R24 interconnects          ; 8 / 5,926 ( < 1 % )     ;
+; R4 interconnects           ; 322 / 167,484 ( < 1 % ) ;
 +----------------------------+-------------------------+
 
 
@@ -1751,7 +1753,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Apr 16 20:31:11 2017
+    Info: Processing started: Mon Apr 17 18:13:52 2017
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off projetoHardware -c projetoHardware
 Info: Selected device EP2C70F896C6 for design "projetoHardware"
 Info: Low junction temperature is 0 degrees C
@@ -1797,7 +1799,7 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~nCSO~ is reserved at location K9
     Info: Pin ~LVDS195p/nCEO~ is reserved at location AD25
 Info: Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
-Critical Warning: No exact pin location assignment(s) for 103 pins of 103 total pins
+Critical Warning: No exact pin location assignment(s) for 104 pins of 104 total pins
     Info: Pin PCOut[0] not assigned to an exact location on the device
     Info: Pin PCOut[1] not assigned to an exact location on the device
     Info: Pin PCOut[2] not assigned to an exact location on the device
@@ -1899,6 +1901,7 @@ Critical Warning: No exact pin location assignment(s) for 103 pins of 103 total 
     Info: Pin StateOut[2] not assigned to an exact location on the device
     Info: Pin WriteOrReadOut not assigned to an exact location on the device
     Info: Pin PCControlOut not assigned to an exact location on the device
+    Info: Pin IRWrite not assigned to an exact location on the device
     Info: Pin clock not assigned to an exact location on the device
     Info: Pin res not assigned to an exact location on the device
 Info: Timing-driven compilation is using the Classic Timing Analyzer
@@ -1917,7 +1920,7 @@ Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
 Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info: Number of I/O pins in group: 101 (unused VREF, 3.3V VCCIO, 0 input, 101 output, 0 bidirectional)
+    Info: Number of I/O pins in group: 102 (unused VREF, 3.3V VCCIO, 0 input, 102 output, 0 bidirectional)
         Info: I/O standards used: 3.3-V LVTTL.
 Info: I/O bank details before I/O pin placement
     Info: Statistics of I/O banks
@@ -1929,51 +1932,51 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  80 pins available
         Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  74 pins available
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter preparation operations ending: elapsed time is 00:00:01
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
-Info: Fitter placement operations ending: elapsed time is 00:00:02
+Info: Fitter placement operations ending: elapsed time is 00:00:01
 Info: Estimated most critical path is register to register delay of 14.916 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X86_Y47; Fanout = 59; REG Node = 'unidadeControle:unidadeControle|state.Reset'
-    Info: 2: + IC(0.473 ns) + CELL(0.150 ns) = 0.623 ns; Loc. = LAB_X86_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[4]~0'
-    Info: 3: + IC(0.415 ns) + CELL(0.150 ns) = 1.188 ns; Loc. = LAB_X86_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[6]~3'
-    Info: 4: + IC(0.415 ns) + CELL(0.150 ns) = 1.753 ns; Loc. = LAB_X86_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[7]~4'
-    Info: 5: + IC(0.145 ns) + CELL(0.420 ns) = 2.318 ns; Loc. = LAB_X86_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[8]~7'
-    Info: 6: + IC(0.415 ns) + CELL(0.150 ns) = 2.883 ns; Loc. = LAB_X86_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[9]~8'
-    Info: 7: + IC(0.145 ns) + CELL(0.420 ns) = 3.448 ns; Loc. = LAB_X86_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[10]~10'
-    Info: 8: + IC(0.415 ns) + CELL(0.150 ns) = 4.013 ns; Loc. = LAB_X86_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[11]~11'
-    Info: 9: + IC(0.145 ns) + CELL(0.420 ns) = 4.578 ns; Loc. = LAB_X86_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[12]~14'
-    Info: 10: + IC(0.415 ns) + CELL(0.150 ns) = 5.143 ns; Loc. = LAB_X86_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[13]~15'
-    Info: 11: + IC(0.336 ns) + CELL(0.420 ns) = 5.899 ns; Loc. = LAB_X87_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[14]~17'
-    Info: 12: + IC(0.415 ns) + CELL(0.150 ns) = 6.464 ns; Loc. = LAB_X87_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[15]~18'
-    Info: 13: + IC(0.145 ns) + CELL(0.420 ns) = 7.029 ns; Loc. = LAB_X87_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[16]~21'
-    Info: 14: + IC(0.415 ns) + CELL(0.150 ns) = 7.594 ns; Loc. = LAB_X87_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[17]~22'
-    Info: 15: + IC(0.145 ns) + CELL(0.420 ns) = 8.159 ns; Loc. = LAB_X87_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[18]~24'
-    Info: 16: + IC(0.415 ns) + CELL(0.150 ns) = 8.724 ns; Loc. = LAB_X87_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[19]~25'
-    Info: 17: + IC(0.145 ns) + CELL(0.420 ns) = 9.289 ns; Loc. = LAB_X87_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[20]~28'
-    Info: 18: + IC(0.415 ns) + CELL(0.150 ns) = 9.854 ns; Loc. = LAB_X87_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[21]~29'
-    Info: 19: + IC(0.145 ns) + CELL(0.420 ns) = 10.419 ns; Loc. = LAB_X87_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[22]~31'
-    Info: 20: + IC(0.415 ns) + CELL(0.150 ns) = 10.984 ns; Loc. = LAB_X87_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[23]~32'
-    Info: 21: + IC(0.145 ns) + CELL(0.420 ns) = 11.549 ns; Loc. = LAB_X87_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[24]~35'
-    Info: 22: + IC(0.415 ns) + CELL(0.150 ns) = 12.114 ns; Loc. = LAB_X87_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[25]~36'
-    Info: 23: + IC(0.145 ns) + CELL(0.420 ns) = 12.679 ns; Loc. = LAB_X87_Y47; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[26]~38'
-    Info: 24: + IC(0.415 ns) + CELL(0.150 ns) = 13.244 ns; Loc. = LAB_X87_Y47; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[27]~39'
-    Info: 25: + IC(0.145 ns) + CELL(0.420 ns) = 13.809 ns; Loc. = LAB_X87_Y47; Fanout = 2; COMB Node = 'Ula32:Ula|carry_temp[29]~42'
-    Info: 26: + IC(0.873 ns) + CELL(0.150 ns) = 14.832 ns; Loc. = LAB_X85_Y47; Fanout = 2; COMB Node = 'Ula32:Ula|Mux0~0'
-    Info: 27: + IC(0.000 ns) + CELL(0.084 ns) = 14.916 ns; Loc. = LAB_X85_Y47; Fanout = 2; REG Node = 'Registrador:PC|Saida[31]'
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X78_Y49; Fanout = 59; REG Node = 'unidadeControle:unidadeControle|state.Reset'
+    Info: 2: + IC(0.473 ns) + CELL(0.150 ns) = 0.623 ns; Loc. = LAB_X78_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[4]~0'
+    Info: 3: + IC(0.415 ns) + CELL(0.150 ns) = 1.188 ns; Loc. = LAB_X78_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[6]~3'
+    Info: 4: + IC(0.415 ns) + CELL(0.150 ns) = 1.753 ns; Loc. = LAB_X78_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[7]~4'
+    Info: 5: + IC(0.145 ns) + CELL(0.420 ns) = 2.318 ns; Loc. = LAB_X78_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[8]~7'
+    Info: 6: + IC(0.415 ns) + CELL(0.150 ns) = 2.883 ns; Loc. = LAB_X78_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[9]~8'
+    Info: 7: + IC(0.145 ns) + CELL(0.420 ns) = 3.448 ns; Loc. = LAB_X78_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[10]~10'
+    Info: 8: + IC(0.415 ns) + CELL(0.150 ns) = 4.013 ns; Loc. = LAB_X78_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[11]~11'
+    Info: 9: + IC(0.145 ns) + CELL(0.420 ns) = 4.578 ns; Loc. = LAB_X78_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[12]~14'
+    Info: 10: + IC(0.415 ns) + CELL(0.150 ns) = 5.143 ns; Loc. = LAB_X78_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[13]~15'
+    Info: 11: + IC(0.603 ns) + CELL(0.420 ns) = 6.166 ns; Loc. = LAB_X76_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[14]~17'
+    Info: 12: + IC(0.415 ns) + CELL(0.150 ns) = 6.731 ns; Loc. = LAB_X76_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[15]~18'
+    Info: 13: + IC(0.145 ns) + CELL(0.420 ns) = 7.296 ns; Loc. = LAB_X76_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[16]~21'
+    Info: 14: + IC(0.415 ns) + CELL(0.150 ns) = 7.861 ns; Loc. = LAB_X76_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[17]~22'
+    Info: 15: + IC(0.145 ns) + CELL(0.420 ns) = 8.426 ns; Loc. = LAB_X76_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[18]~24'
+    Info: 16: + IC(0.415 ns) + CELL(0.150 ns) = 8.991 ns; Loc. = LAB_X76_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[19]~25'
+    Info: 17: + IC(0.145 ns) + CELL(0.420 ns) = 9.556 ns; Loc. = LAB_X76_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[20]~28'
+    Info: 18: + IC(0.415 ns) + CELL(0.150 ns) = 10.121 ns; Loc. = LAB_X76_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[21]~29'
+    Info: 19: + IC(0.145 ns) + CELL(0.420 ns) = 10.686 ns; Loc. = LAB_X76_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[22]~31'
+    Info: 20: + IC(0.415 ns) + CELL(0.150 ns) = 11.251 ns; Loc. = LAB_X76_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[23]~32'
+    Info: 21: + IC(0.145 ns) + CELL(0.420 ns) = 11.816 ns; Loc. = LAB_X76_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[24]~35'
+    Info: 22: + IC(0.415 ns) + CELL(0.150 ns) = 12.381 ns; Loc. = LAB_X76_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[25]~36'
+    Info: 23: + IC(0.145 ns) + CELL(0.420 ns) = 12.946 ns; Loc. = LAB_X76_Y49; Fanout = 1; COMB Node = 'Ula32:Ula|carry_temp[26]~38'
+    Info: 24: + IC(0.415 ns) + CELL(0.150 ns) = 13.511 ns; Loc. = LAB_X76_Y49; Fanout = 3; COMB Node = 'Ula32:Ula|carry_temp[27]~39'
+    Info: 25: + IC(0.145 ns) + CELL(0.420 ns) = 14.076 ns; Loc. = LAB_X76_Y49; Fanout = 2; COMB Node = 'Ula32:Ula|carry_temp[29]~42'
+    Info: 26: + IC(0.606 ns) + CELL(0.150 ns) = 14.832 ns; Loc. = LAB_X77_Y49; Fanout = 2; COMB Node = 'Ula32:Ula|Mux0~0'
+    Info: 27: + IC(0.000 ns) + CELL(0.084 ns) = 14.916 ns; Loc. = LAB_X77_Y49; Fanout = 2; REG Node = 'Registrador:PC|Saida[31]'
     Info: Total cell delay = 6.804 ns ( 45.62 % )
     Info: Total interconnect delay = 8.112 ns ( 54.38 % )
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 1% of the available device resources in the region that extends from location X84_Y39 to location X95_Y51
+    Info: Peak interconnect usage is 1% of the available device resources in the region that extends from location X72_Y39 to location X83_Y51
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
     Info: Optimizations that may affect the design's timing were skipped
 Info: Started post-fitting delay annotation
-Warning: Found 101 output pins without output pin load capacitance assignment
+Warning: Found 102 output pins without output pin load capacitance assignment
     Info: Pin "PCOut[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "PCOut[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "PCOut[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2075,13 +2078,14 @@ Warning: Found 101 output pins without output pin load capacitance assignment
     Info: Pin "StateOut[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "WriteOrReadOut" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "PCControlOut" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "IRWrite" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info: Delay annotation completed successfully
 Info: Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 375 megabytes
-    Info: Processing ended: Sun Apr 16 20:31:21 2017
-    Info: Elapsed time: 00:00:10
+    Info: Processing ended: Mon Apr 17 18:14:01 2017
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:10
 
 

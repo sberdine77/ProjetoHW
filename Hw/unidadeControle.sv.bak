@@ -6,10 +6,11 @@ module unidadeControle
 
 	
 	enum logic [2:0] {
-	Reset, 
-	MemoryRead, 
-	WaitMemoryRead, 
-	PCWrite} state;
+	Reset, //0
+	MemoryRead, //1
+	WaitMemoryRead, //2
+	PCWrite //3
+	} state;
 	
 	initial state <= Reset;
 	

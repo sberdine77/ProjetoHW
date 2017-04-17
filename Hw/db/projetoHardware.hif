@@ -868,7 +868,7 @@ ON
 # case_sensitive
 # source_file
 datapath.sv
-a86b1271708973afeceae64354e97c1
+b85cb54121b7e55666932bfa9b1dfa9
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -893,6 +893,75 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
+MuxPC
+# storage
+db|projetoHardware.(9).cnf
+db|projetoHardware.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+muxpc.sv
+9ff6776a373304a37af4b9cda4b5f1
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+MuxPC:MuxPc
+}
+# macro_sequence
+
+# end
+# entity
+Instr_Reg
+# storage
+db|projetoHardware.(10).cnf
+db|projetoHardware.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+componentes do projeto|instr_reg.vhd
+2210c8a335c3f44acebaf05a94bee
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Instr_Reg:IR
+}
+# lmf
+f:|hw|projeto|q|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 unidadeControle
 # storage
 db|projetoHardware.(1).cnf
@@ -904,7 +973,7 @@ ON
 # case_sensitive
 # source_file
 unidadecontrole.sv
-e3266bcc81fa98939eeb38201cf0e7
+5b3bc608b496340d80e65a245d7835
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

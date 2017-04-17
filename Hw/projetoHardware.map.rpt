@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projetoHardware
-Sun Apr 16 20:31:10 2017
+Mon Apr 17 18:13:51 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -26,9 +26,11 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  18. Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Two
  19. Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Three
  20. Port Connectivity Checks: "Memoria:Memoria"
- 21. Port Connectivity Checks: "Ula32:Ula"
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+ 21. Port Connectivity Checks: "Instr_Reg:IR"
+ 22. Port Connectivity Checks: "Ula32:Ula"
+ 23. Port Connectivity Checks: "unidadeControle:unidadeControle"
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,7 +56,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 16 20:31:10 2017        ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 17 18:13:51 2017        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; projetoHardware                              ;
 ; Top-level Entity Name              ; dataPath                                     ;
@@ -63,7 +65,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 77                                           ;
 ;     Dedicated logic registers      ; 34                                           ;
 ; Total registers                    ; 34                                           ;
-; Total pins                         ; 103                                          ;
+; Total pins                         ; 104                                          ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 8,192                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -166,11 +168,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+
 ; File Name with User-Entered Path       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ;
 +----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+
+; Componentes do Projeto/Instr_Reg.vhd   ; yes             ; User VHDL File               ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/Componentes do Projeto/Instr_Reg.vhd   ;
 ; Componentes do Projeto/Memoria.vhd     ; yes             ; User VHDL File               ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/Componentes do Projeto/Memoria.vhd     ;
 ; Componentes do Projeto/Registrador.vhd ; yes             ; User VHDL File               ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/Componentes do Projeto/Registrador.vhd ;
 ; Componentes do Projeto/ula32.vhd       ; yes             ; User VHDL File               ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/Componentes do Projeto/ula32.vhd       ;
 ; unidadeControle.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/unidadeControle.sv                     ;
 ; dataPath.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/dataPath.sv                            ;
+; MuxPC.sv                               ; yes             ; User SystemVerilog HDL File  ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/MuxPC.sv                               ;
 ; lpm_ram_dq.tdf                         ; yes             ; Megafunction                 ; f:/hw/projeto/q/quartus/libraries/megafunctions/lpm_ram_dq.tdf             ;
 ; altram.tdf                             ; yes             ; Megafunction                 ; f:/hw/projeto/q/quartus/libraries/megafunctions/altram.tdf                 ;
 ; altsyncram.tdf                         ; yes             ; Megafunction                 ; f:/hw/projeto/q/quartus/libraries/megafunctions/altsyncram.tdf             ;
@@ -199,12 +203,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 34    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 103   ;
+; I/O pins                                    ; 104   ;
 ; Total memory bits                           ; 8192  ;
 ; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 66    ;
 ; Total fan-out                               ; 737   ;
-; Average fan-out                             ; 3.00  ;
+; Average fan-out                             ; 2.98  ;
 +---------------------------------------------+-------+
 
 
@@ -213,7 +217,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
-; |dataPath                                       ; 77 (1)            ; 34 (0)       ; 8192        ; 0            ; 0       ; 0         ; 103  ; 0            ; |dataPath                                                                                                           ; work         ;
+; |dataPath                                       ; 77 (1)            ; 34 (0)       ; 8192        ; 0            ; 0       ; 0         ; 104  ; 0            ; |dataPath                                                                                                           ; work         ;
 ;    |Memoria:Memoria|                            ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria                                                                                           ; work         ;
 ;       |lpm_ram_dq:MEM_plus_One|                 ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
 ;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
@@ -428,6 +432,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Instr_Reg:IR"                                                                                                                ;
++------------------+--------+------------------+----------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity         ; Details                                                                                                  ;
++------------------+--------+------------------+----------------------------------------------------------------------------------------------------------+
+; instr31_26       ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; instr25_21       ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; instr20_16       ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; instr15_0        ; Output ; Critical Warning ; Can't connect array with 17 elements in array dimension 1 to port with 16 elements in the same dimension ;
+; instr15_0[15..0] ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
++------------------+--------+------------------+----------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Ula32:Ula"                                                                                                           ;
 +----------+--------+------------------+----------------------------------------------------------------------------------------------------------+
@@ -445,13 +462,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+------------------+----------------------------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "unidadeControle:unidadeControle"                                                                                                              ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                      ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; opcode ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; funct  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Apr 16 20:31:08 2017
+    Info: Processing started: Mon Apr 17 18:13:49 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projetoHardware -c projetoHardware
 Info: Found 2 design units, including 1 entities, in source file componentes do projeto/banco_reg.vhd
     Info: Found design unit 1: Banco_reg-behavioral_arch
@@ -476,10 +503,17 @@ Info: Found 1 design units, including 1 entities, in source file unidadecontrole
     Info: Found entity 1: unidadeControle
 Info: Found 1 design units, including 1 entities, in source file datapath.sv
     Info: Found entity 1: dataPath
+Info: Found 1 design units, including 1 entities, in source file muxpc.sv
+    Info: Found entity 1: MuxPC
+Info: Found 1 design units, including 1 entities, in source file muxregwrite.sv
+    Info: Found entity 1: MuxRegWrite
 Info: Elaborating entity "dataPath" for the top level hierarchy
+Warning (10034): Output port "IRWrite" at dataPath.sv(6) has no driver
 Info: Elaborating entity "unidadeControle" for hierarchy "unidadeControle:unidadeControle"
 Info: Elaborating entity "Ula32" for hierarchy "Ula32:Ula"
 Info: Elaborating entity "Registrador" for hierarchy "Registrador:PC"
+Info: Elaborating entity "MuxPC" for hierarchy "MuxPC:MuxPc"
+Info: Elaborating entity "Instr_Reg" for hierarchy "Instr_Reg:IR"
 Info: Elaborating entity "Memoria" for hierarchy "Memoria:Memoria"
 Info: Elaborating entity "LPM_RAM_DQ" for hierarchy "Memoria:Memoria|LPM_RAM_DQ:MEM"
 Info: Elaborated megafunction instantiation "Memoria:Memoria|LPM_RAM_DQ:MEM"
@@ -503,7 +537,7 @@ Info: Elaborated megafunction instantiation "Memoria:Memoria|LPM_RAM_DQ:MEM|altr
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_e1a1.tdf
     Info: Found entity 1: altsyncram_e1a1
 Info: Elaborating entity "altsyncram_e1a1" for hierarchy "Memoria:Memoria|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated"
-Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "PCOut[0]" is stuck at GND
     Warning (13410): Pin "PCOut[1]" is stuck at GND
@@ -511,21 +545,22 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "AluOutOut[1]" is stuck at GND
     Warning (13410): Pin "StateOut[2]" is stuck at GND
     Warning (13410): Pin "WriteOrReadOut" is stuck at GND
+    Warning (13410): Pin "IRWrite" is stuck at GND
 Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
     Info: Register "unidadeControle:unidadeControle|state~4" lost all its fanouts during netlist optimizations.
     Info: Register "unidadeControle:unidadeControle|state~5" lost all its fanouts during netlist optimizations.
     Info: Register "unidadeControle:unidadeControle|state~6" lost all its fanouts during netlist optimizations.
 Info: Generated suppressed messages file C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHardware.map.smsg
-Info: Implemented 245 device resources after synthesis - the final resource count might be different
+Info: Implemented 246 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
-    Info: Implemented 101 output pins
+    Info: Implemented 102 output pins
     Info: Implemented 110 logic cells
     Info: Implemented 32 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 9 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 264 megabytes
-    Info: Processing ended: Sun Apr 16 20:31:10 2017
+    Info: Processing ended: Mon Apr 17 18:13:51 2017
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+

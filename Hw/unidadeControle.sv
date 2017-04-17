@@ -1,5 +1,6 @@
 module unidadeControle
-(	input logic clk, reset, 
+(	input logic clk, reset,
+	input logic [5:0] opcode, funct, 
 	output logic memWriteOrRead, pcControl, 
 	output logic [2:0] aluControl,
 	output logic [2:0] estado);
