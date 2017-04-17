@@ -1,22 +1,31 @@
 module unidadeControle
 (	input logic clk, reset, 
-	output logic memRead, memWrite, pcControl, 
-	output logic [2:0] aluControl);
+	output logic memWriteOrRead, pcControl, 
+	output logic [2:0] aluControl,
+	output logic [2:0] estado);
 
 	
-	enum logic [1:0] {Reset ,MemoryRead, WaitMemoryRead, PCWrite} state;
+	enum logic [2:0] {
+	Reset, //0
+	MemoryRead, //1
+	WaitMemoryRead, //2
+	PCWrite //3
+	} state;
 	
 	initial state <= Reset;
 	
-	always_ff@(posedge clk, negedge reset)
+	always_ff@(posedge clk or posedge reset)
 	begin
-		
-		case(state)
-		Reset: state <= MemoryRead;
-		MemoryRead: state <= WaitMemoryRead;
-		WaitMemoryRead: state <= PCWrite;
-		default: state <= Reset;
-		endcase
+		if(reset) state <= Reset;
+		else
+		begin
+			case(state)
+			Reset: state <= MemoryRead;
+			MemoryRead: state <= WaitMemoryRead;
+			WaitMemoryRead: state <= PCWrite;
+			PCWrite: state <= MemoryRead;
+			endcase
+		end
 	end
 	
 	always_comb
@@ -24,31 +33,31 @@ module unidadeControle
 		case(state)
 		Reset:
 		begin
-			memRead = 1'b0;
-			memWrite = 1'b0;
+			memWriteOrRead = 1'b0;
 			pcControl = 1'b0;
 			aluControl = 3'b000;
+			estado <= state;
 		end
 		MemoryRead:
 		begin
-			memRead = 1'b1;
-			memWrite = 1'b0;
+			memWriteOrRead = 1'b0;
 			pcControl = 1'b0;
 			aluControl = 3'b001;
+			estado <= state;
 		end
 		WaitMemoryRead:
 		begin
-			memRead = 1'b1;
-			memWrite = 1'b0;
+			memWriteOrRead = 1'b0;
 			pcControl = 1'b0;
 			aluControl = 3'b001;
+			estado <= state;
 		end
 		PCWrite:
 		begin
-			memRead = 1'b0;
-			memWrite = 1'b0;
+			memWriteOrRead = 1'b0;
 			pcControl = 1'b1;
 			aluControl = 3'b001;
+			estado <= state;
 		end
 		endcase
 	end
