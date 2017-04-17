@@ -2,24 +2,14 @@
 Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
-Type           : Worst-case tco
+Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 19.358 ns
-From           : unidadeControle:unidadeControle|state.Reset
-To             : AluOutOut[30]
-From Clock     : clock
+Actual Time    : 14.061 ns
+From           : MemtoReg
+To             : WriteDataMem[14]
+From Clock     : --
 To Clock       : --
-Failed Paths   : 0
-
-Type           : Clock Setup: 'clock'
-Slack          : N/A
-Required Time  : None
-Actual Time    : 83.33 MHz ( period = 12.001 ns )
-From           : unidadeControle:unidadeControle|state.Reset
-To             : Registrador:PC|Saida[30]
-From Clock     : clock
-To Clock       : clock
 Failed Paths   : 0
 
 Type           : Total number of failed paths

@@ -1,0 +1,21 @@
+module MuxB
+(
+	input logic [31:0] B, 
+	input logic [31:0] signalExt,
+	input logic [31:0] desloc_esq,
+	input logic [2:0] Four,
+	input logic [1:0] ALUSrcB,
+	output logic [31:0] BOut
+);
+
+always_comb
+	begin
+		case (ALUSrcB)
+		1'b0: BOut <= B;
+		1'b1: BOut <= Four;
+		1'b2: BOut <= signalExt;
+		1'b3: BOut <= desloc_esq;
+		endcase
+	end
+
+endmodule: MuxB

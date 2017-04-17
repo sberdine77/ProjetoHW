@@ -1,7 +1,0 @@
-
-State Machine - |dataPath|unidadeControle:unidadeControle|state
-Name state.PCWrite state.WaitMemoryRead state.MemoryRead state.Reset 
-state.Reset 0 0 0 0 
-state.MemoryRead 0 0 1 1 
-state.WaitMemoryRead 0 1 0 1 
-state.PCWrite 1 0 0 1 

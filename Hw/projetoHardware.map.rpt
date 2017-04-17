@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projetoHardware
-Mon Apr 17 18:13:51 2017
+Mon Apr 17 16:15:38 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -13,24 +13,9 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. State Machine - |dataPath|unidadeControle:unidadeControle|state
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Source assignments for Memoria:Memoria|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 13. Source assignments for Memoria:Memoria|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 14. Source assignments for Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 15. Source assignments for Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 16. Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM
- 17. Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM_plus_One
- 18. Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Two
- 19. Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Three
- 20. Port Connectivity Checks: "Memoria:Memoria"
- 21. Port Connectivity Checks: "Instr_Reg:IR"
- 22. Port Connectivity Checks: "Ula32:Ula"
- 23. Port Connectivity Checks: "unidadeControle:unidadeControle"
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
+ 10. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,18 +41,18 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 17 18:13:51 2017        ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 17 16:15:38 2017        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; projetoHardware                              ;
-; Top-level Entity Name              ; dataPath                                     ;
+; Top-level Entity Name              ; MuxDataWrite                                 ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 80                                           ;
-;     Total combinational functions  ; 77                                           ;
-;     Dedicated logic registers      ; 34                                           ;
-; Total registers                    ; 34                                           ;
-; Total pins                         ; 104                                          ;
+; Total logic elements               ; 32                                           ;
+;     Total combinational functions  ; 32                                           ;
+;     Dedicated logic registers      ; 0                                            ;
+; Total registers                    ; 0                                            ;
+; Total pins                         ; 97                                           ;
 ; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 8,192                                        ;
+; Total memory bits                  ; 0                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
 ; Total PLLs                         ; 0                                            ;
 +------------------------------------+----------------------------------------------+
@@ -79,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C70F896C6       ;                    ;
-; Top-level entity name                                                      ; dataPath           ; projetoHardware    ;
+; Top-level entity name                                                      ; MuxDataWrite       ; projetoHardware    ;
 ; Family name                                                                ; Cyclone II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -152,132 +137,69 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 2      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+
-; File Name with User-Entered Path       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ;
-+----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+
-; Componentes do Projeto/Instr_Reg.vhd   ; yes             ; User VHDL File               ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/Componentes do Projeto/Instr_Reg.vhd   ;
-; Componentes do Projeto/Memoria.vhd     ; yes             ; User VHDL File               ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/Componentes do Projeto/Memoria.vhd     ;
-; Componentes do Projeto/Registrador.vhd ; yes             ; User VHDL File               ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/Componentes do Projeto/Registrador.vhd ;
-; Componentes do Projeto/ula32.vhd       ; yes             ; User VHDL File               ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/Componentes do Projeto/ula32.vhd       ;
-; unidadeControle.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/unidadeControle.sv                     ;
-; dataPath.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/dataPath.sv                            ;
-; MuxPC.sv                               ; yes             ; User SystemVerilog HDL File  ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/MuxPC.sv                               ;
-; lpm_ram_dq.tdf                         ; yes             ; Megafunction                 ; f:/hw/projeto/q/quartus/libraries/megafunctions/lpm_ram_dq.tdf             ;
-; altram.tdf                             ; yes             ; Megafunction                 ; f:/hw/projeto/q/quartus/libraries/megafunctions/altram.tdf                 ;
-; altsyncram.tdf                         ; yes             ; Megafunction                 ; f:/hw/projeto/q/quartus/libraries/megafunctions/altsyncram.tdf             ;
-; db/altsyncram_e1a1.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/sbsx7/Desktop/ProjetoHW/Hw/db/altsyncram_e1a1.tdf                 ;
-+----------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------+
+; MuxDataWrite.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/sbsx/Desktop/HW/ProjetoHW/Hw/MuxDataWrite.sv ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 80    ;
-;                                             ;       ;
-; Total combinational functions               ; 77    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 36    ;
-;     -- 3 input functions                    ; 31    ;
-;     -- <=2 input functions                  ; 10    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 77    ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 34    ;
-;     -- Dedicated logic registers            ; 34    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 104   ;
-; Total memory bits                           ; 8192  ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 66    ;
-; Total fan-out                               ; 737   ;
-; Average fan-out                             ; 2.98  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 32       ;
+;                                             ;          ;
+; Total combinational functions               ; 32       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 32       ;
+;     -- <=2 input functions                  ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 32       ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+;     -- Dedicated logic registers            ; 0        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 97       ;
+; Maximum fan-out node                        ; MemtoReg ;
+; Maximum fan-out                             ; 32       ;
+; Total fan-out                               ; 128      ;
+; Average fan-out                             ; 0.99     ;
++---------------------------------------------+----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Library Name ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
-; |dataPath                                       ; 77 (1)            ; 34 (0)       ; 8192        ; 0            ; 0       ; 0         ; 104  ; 0            ; |dataPath                                                                                                           ; work         ;
-;    |Memoria:Memoria|                            ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria                                                                                           ; work         ;
-;       |lpm_ram_dq:MEM_plus_One|                 ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
-;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
-;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_e1a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
-;       |lpm_ram_dq:MEM_plus_Three|               ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_Three                                                                 ;              ;
-;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ;              ;
-;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
-;                |altsyncram_e1a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ; work         ;
-;       |lpm_ram_dq:MEM_plus_Two|                 ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_Two                                                                   ;              ;
-;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ;              ;
-;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_e1a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
-;       |lpm_ram_dq:MEM|                          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM                                                                            ; work         ;
-;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM|altram:sram                                                                ; work         ;
-;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
-;                |altsyncram_e1a1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Memoria:Memoria|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated            ; work         ;
-;    |Registrador:PC|                             ; 0 (0)             ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Registrador:PC                                                                                            ;              ;
-;    |Ula32:Ula|                                  ; 73 (73)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|Ula32:Ula                                                                                                 ; work         ;
-;    |unidadeControle:unidadeControle|            ; 3 (3)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dataPath|unidadeControle:unidadeControle                                                                           ;              ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |MuxDataWrite              ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 97   ; 0            ; |MuxDataWrite       ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                              ;
-+----------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
-; Name                                                                                                                 ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF            ;
-+----------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
-; Memoria:Memoria|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; instrucoes.mif ;
-; Memoria:Memoria|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; instrucoes.mif ;
-; Memoria:Memoria|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; instrucoes.mif ;
-; Memoria:Memoria|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM            ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; instrucoes.mif ;
-+----------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------+
-; State Machine - |dataPath|unidadeControle:unidadeControle|state                              ;
-+----------------------+---------------+----------------------+------------------+-------------+
-; Name                 ; state.PCWrite ; state.WaitMemoryRead ; state.MemoryRead ; state.Reset ;
-+----------------------+---------------+----------------------+------------------+-------------+
-; state.Reset          ; 0             ; 0                    ; 0                ; 0           ;
-; state.MemoryRead     ; 0             ; 0                    ; 1                ; 1           ;
-; state.WaitMemoryRead ; 0             ; 1                    ; 0                ; 1           ;
-; state.PCWrite        ; 1             ; 0                    ; 0                ; 1           ;
-+----------------------+---------------+----------------------+------------------+-------------+
-
-
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; Registrador:PC|Saida[0..1]              ; Stuck at GND due to stuck port data_in ;
-; unidadeControle:unidadeControle|state~4 ; Lost fanout                            ;
-; unidadeControle:unidadeControle|state~5 ; Lost fanout                            ;
-; unidadeControle:unidadeControle|state~6 ; Lost fanout                            ;
-; Total Number of Removed Registers = 5   ;                                        ;
-+-----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -285,191 +207,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 34    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:Memoria|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                      ;
-+---------------------------------+--------------------+------+---------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                       ;
-+---------------------------------+--------------------+------+---------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:Memoria|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                               ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                               ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ;
-+---------------------------------+--------------------+------+--------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                 ;
-+---------------------------------+--------------------+------+--------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                  ;
-+---------------------------------+--------------------+------+--------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM ;
-+------------------------+----------------+-----------------------------------+
-; Parameter Name         ; Value          ; Type                              ;
-+------------------------+----------------+-----------------------------------+
-; LPM_WIDTH              ; 8              ; Signed Integer                    ;
-; LPM_WIDTHAD            ; 8              ; Signed Integer                    ;
-; LPM_NUMWORDS           ; 0              ; Signed Integer                    ;
-; LPM_INDATA             ; REGISTERED     ; Untyped                           ;
-; LPM_ADDRESS_CONTROL    ; REGISTERED     ; Untyped                           ;
-; LPM_OUTDATA            ; REGISTERED     ; Untyped                           ;
-; LPM_FILE               ; instrucoes.mif ; Untyped                           ;
-; USE_EAB                ; ON             ; Untyped                           ;
-; DEVICE_FAMILY          ; Cyclone II     ; Untyped                           ;
-; CBXI_PARAMETER         ; NOTHING        ; Untyped                           ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
-+------------------------+----------------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM_plus_One ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTH              ; 8              ; Signed Integer                             ;
-; LPM_WIDTHAD            ; 8              ; Signed Integer                             ;
-; LPM_NUMWORDS           ; 0              ; Signed Integer                             ;
-; LPM_INDATA             ; REGISTERED     ; Untyped                                    ;
-; LPM_ADDRESS_CONTROL    ; REGISTERED     ; Untyped                                    ;
-; LPM_OUTDATA            ; REGISTERED     ; Untyped                                    ;
-; LPM_FILE               ; instrucoes.mif ; Untyped                                    ;
-; USE_EAB                ; ON             ; Untyped                                    ;
-; DEVICE_FAMILY          ; Cyclone II     ; Untyped                                    ;
-; CBXI_PARAMETER         ; NOTHING        ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Two ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTH              ; 8              ; Signed Integer                             ;
-; LPM_WIDTHAD            ; 8              ; Signed Integer                             ;
-; LPM_NUMWORDS           ; 0              ; Signed Integer                             ;
-; LPM_INDATA             ; REGISTERED     ; Untyped                                    ;
-; LPM_ADDRESS_CONTROL    ; REGISTERED     ; Untyped                                    ;
-; LPM_OUTDATA            ; REGISTERED     ; Untyped                                    ;
-; LPM_FILE               ; instrucoes.mif ; Untyped                                    ;
-; USE_EAB                ; ON             ; Untyped                                    ;
-; DEVICE_FAMILY          ; Cyclone II     ; Untyped                                    ;
-; CBXI_PARAMETER         ; NOTHING        ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Memoria:Memoria|LPM_RAM_DQ:MEM_plus_Three ;
-+------------------------+----------------+----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                         ;
-+------------------------+----------------+----------------------------------------------+
-; LPM_WIDTH              ; 8              ; Signed Integer                               ;
-; LPM_WIDTHAD            ; 8              ; Signed Integer                               ;
-; LPM_NUMWORDS           ; 0              ; Signed Integer                               ;
-; LPM_INDATA             ; REGISTERED     ; Untyped                                      ;
-; LPM_ADDRESS_CONTROL    ; REGISTERED     ; Untyped                                      ;
-; LPM_OUTDATA            ; REGISTERED     ; Untyped                                      ;
-; LPM_FILE               ; instrucoes.mif ; Untyped                                      ;
-; USE_EAB                ; ON             ; Untyped                                      ;
-; DEVICE_FAMILY          ; Cyclone II     ; Untyped                                      ;
-; CBXI_PARAMETER         ; NOTHING        ; Untyped                                      ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
-+------------------------+----------------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Memoria:Memoria"                                                                                                                              ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                      ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; datain ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Instr_Reg:IR"                                                                                                                ;
-+------------------+--------+------------------+----------------------------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity         ; Details                                                                                                  ;
-+------------------+--------+------------------+----------------------------------------------------------------------------------------------------------+
-; instr31_26       ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; instr25_21       ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; instr20_16       ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; instr15_0        ; Output ; Critical Warning ; Can't connect array with 17 elements in array dimension 1 to port with 16 elements in the same dimension ;
-; instr15_0[15..0] ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-+------------------+--------+------------------+----------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Ula32:Ula"                                                                                                           ;
-+----------+--------+------------------+----------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity         ; Details                                                                                                  ;
-+----------+--------+------------------+----------------------------------------------------------------------------------------------------------+
-; b        ; Input  ; Critical Warning ; Can't connect array with 3 elements in array dimension 1 to port with 32 elements in the same dimension  ;
-; b[1..0]  ; Input  ; Info             ; Stuck at GND                                                                                             ;
-; b[31]    ; Input  ; Info             ; Stuck at VCC                                                                                             ;
-; overflow ; Output ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; negativo ; Output ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; z        ; Output ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; igual    ; Output ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; maior    ; Output ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; menor    ; Output ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+------------------+----------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "unidadeControle:unidadeControle"                                                                                                              ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                      ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; opcode ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; funct  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -478,8 +223,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Apr 17 18:13:49 2017
+    Info: Processing started: Mon Apr 17 16:15:36 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projetoHardware -c projetoHardware
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file componentes do projeto/banco_reg.vhd
     Info: Found design unit 1: Banco_reg-behavioral_arch
     Info: Found entity 1: Banco_reg
@@ -507,58 +253,21 @@ Info: Found 1 design units, including 1 entities, in source file muxpc.sv
     Info: Found entity 1: MuxPC
 Info: Found 1 design units, including 1 entities, in source file muxregwrite.sv
     Info: Found entity 1: MuxRegWrite
-Info: Elaborating entity "dataPath" for the top level hierarchy
-Warning (10034): Output port "IRWrite" at dataPath.sv(6) has no driver
-Info: Elaborating entity "unidadeControle" for hierarchy "unidadeControle:unidadeControle"
-Info: Elaborating entity "Ula32" for hierarchy "Ula32:Ula"
-Info: Elaborating entity "Registrador" for hierarchy "Registrador:PC"
-Info: Elaborating entity "MuxPC" for hierarchy "MuxPC:MuxPc"
-Info: Elaborating entity "Instr_Reg" for hierarchy "Instr_Reg:IR"
-Info: Elaborating entity "Memoria" for hierarchy "Memoria:Memoria"
-Info: Elaborating entity "LPM_RAM_DQ" for hierarchy "Memoria:Memoria|LPM_RAM_DQ:MEM"
-Info: Elaborated megafunction instantiation "Memoria:Memoria|LPM_RAM_DQ:MEM"
-Info: Instantiated megafunction "Memoria:Memoria|LPM_RAM_DQ:MEM" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "8"
-    Info: Parameter "LPM_WIDTHAD" = "8"
-    Info: Parameter "LPM_NUMWORDS" = "0"
-    Info: Parameter "LPM_INDATA" = "REGISTERED"
-    Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
-    Info: Parameter "LPM_OUTDATA" = "REGISTERED"
-    Info: Parameter "LPM_FILE" = "instrucoes.mif"
-    Info: Parameter "LPM_TYPE" = "LPM_RAM_DQ"
-    Info: Parameter "USE_EAB" = "ON"
-    Info: Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
-    Info: Parameter "LPM_HINT" = "UNUSED"
-Info: Elaborating entity "altram" for hierarchy "Memoria:Memoria|LPM_RAM_DQ:MEM|altram:sram"
-Warning: Assertion warning: altram does not support Cyclone II device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Cyclone II devices
-Info: Elaborated megafunction instantiation "Memoria:Memoria|LPM_RAM_DQ:MEM|altram:sram", which is child of megafunction instantiation "Memoria:Memoria|LPM_RAM_DQ:MEM"
-Info: Elaborating entity "altsyncram" for hierarchy "Memoria:Memoria|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block"
-Info: Elaborated megafunction instantiation "Memoria:Memoria|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "Memoria:Memoria|LPM_RAM_DQ:MEM"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_e1a1.tdf
-    Info: Found entity 1: altsyncram_e1a1
-Info: Elaborating entity "altsyncram_e1a1" for hierarchy "Memoria:Memoria|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated"
-Warning: 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "PCOut[0]" is stuck at GND
-    Warning (13410): Pin "PCOut[1]" is stuck at GND
-    Warning (13410): Pin "AluOutOut[0]" is stuck at GND
-    Warning (13410): Pin "AluOutOut[1]" is stuck at GND
-    Warning (13410): Pin "StateOut[2]" is stuck at GND
-    Warning (13410): Pin "WriteOrReadOut" is stuck at GND
-    Warning (13410): Pin "IRWrite" is stuck at GND
-Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
-    Info: Register "unidadeControle:unidadeControle|state~4" lost all its fanouts during netlist optimizations.
-    Info: Register "unidadeControle:unidadeControle|state~5" lost all its fanouts during netlist optimizations.
-    Info: Register "unidadeControle:unidadeControle|state~6" lost all its fanouts during netlist optimizations.
-Info: Generated suppressed messages file C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHardware.map.smsg
-Info: Implemented 246 device resources after synthesis - the final resource count might be different
-    Info: Implemented 2 input pins
-    Info: Implemented 102 output pins
-    Info: Implemented 110 logic cells
-    Info: Implemented 32 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 264 megabytes
-    Info: Processing ended: Mon Apr 17 18:13:51 2017
+Info: Found 1 design units, including 1 entities, in source file muxa.sv
+    Info: Found entity 1: MuxA
+Info: Found 1 design units, including 1 entities, in source file muxb.sv
+    Info: Found entity 1: MuxB
+Info: Found 1 design units, including 1 entities, in source file muxdatawrite.sv
+    Info: Found entity 1: MuxDataWrite
+Info: Elaborating entity "MuxDataWrite" for the top level hierarchy
+Info: Generated suppressed messages file C:/Users/sbsx/Desktop/HW/ProjetoHW/Hw/projetoHardware.map.smsg
+Info: Implemented 129 device resources after synthesis - the final resource count might be different
+    Info: Implemented 65 input pins
+    Info: Implemented 32 output pins
+    Info: Implemented 32 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 234 megabytes
+    Info: Processing ended: Mon Apr 17 16:15:38 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
@@ -566,6 +275,6 @@ Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/sbsx7/Desktop/ProjetoHW/Hw/projetoHardware.map.smsg.
+The suppressed messages can be found in C:/Users/sbsx/Desktop/HW/ProjetoHW/Hw/projetoHardware.map.smsg.
 
 
