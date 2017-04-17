@@ -1,7 +1,7 @@
 module unidadeControle
 (	input logic clk, reset,
 	input logic [5:0] opcode, funct, 
-	output logic memWriteOrRead, pcControl, 
+	output logic memWriteOrRead, pcControl, irWrite,
 	output logic [2:0] aluControl,
 	output logic [2:0] estado);
 
@@ -10,7 +10,7 @@ module unidadeControle
 	Reset, //0
 	MemoryRead, //1
 	WaitMemoryRead, //2
-	PCWrite //3
+	IRWrite //3
 	} state;
 	
 	initial state <= Reset;
@@ -23,8 +23,8 @@ module unidadeControle
 			case(state)
 			Reset: state <= MemoryRead;
 			MemoryRead: state <= WaitMemoryRead;
-			WaitMemoryRead: state <= PCWrite;
-			PCWrite: state <= MemoryRead;
+			WaitMemoryRead: state <= IRWrite;
+			IRWrite: state <= MemoryRead;
 			endcase
 		end
 	end
@@ -36,6 +36,7 @@ module unidadeControle
 		begin
 			memWriteOrRead = 1'b0;
 			pcControl = 1'b0;
+			irWrite = 1'b1;
 			aluControl = 3'b000;
 			estado <= state;
 		end
@@ -43,6 +44,7 @@ module unidadeControle
 		begin
 			memWriteOrRead = 1'b0;
 			pcControl = 1'b0;
+			irWrite = 1'b1;
 			aluControl = 3'b001;
 			estado <= state;
 		end
@@ -50,13 +52,15 @@ module unidadeControle
 		begin
 			memWriteOrRead = 1'b0;
 			pcControl = 1'b0;
+			irWrite = 1'b1;
 			aluControl = 3'b001;
 			estado <= state;
 		end
-		PCWrite:
+		IRWrite:
 		begin
 			memWriteOrRead = 1'b0;
 			pcControl = 1'b1;
+			irWrite = 1'b1;
 			aluControl = 3'b001;
 			estado <= state;
 		end

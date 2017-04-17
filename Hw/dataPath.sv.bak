@@ -50,6 +50,7 @@ module dataPath
 		.AluOut(wALUOut),
 		.IorD(wIorD),
 		.Address(wAddress)
+	);
 	
 	Instr_Reg IR
 	(	.Clk(clock),
