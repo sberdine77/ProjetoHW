@@ -36,7 +36,7 @@ module unidadeControle
 		begin
 			memWriteOrRead = 1'b0;
 			pcControl = 1'b0;
-			irWrite = 1'b1
+			irWrite = 1'b1;
 			aluControl = 3'b000;
 			estado <= state;
 		end
@@ -44,7 +44,7 @@ module unidadeControle
 		begin
 			memWriteOrRead = 1'b0;
 			pcControl = 1'b0;
-			irWrite = 1'b1
+			irWrite = 1'b1;
 			aluControl = 3'b001;
 			estado <= state;
 		end
@@ -52,7 +52,7 @@ module unidadeControle
 		begin
 			memWriteOrRead = 1'b0;
 			pcControl = 1'b0;
-			irWrite = 1'b1
+			irWrite = 1'b1;
 			aluControl = 3'b001;
 			estado <= state;
 		end
