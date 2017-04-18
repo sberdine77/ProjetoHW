@@ -107,317 +107,515 @@ module unidadeControle
 	always_comb
 	begin
 		case(state)
-		Reset:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			irWrite = 1'b1;
-			aluControl = 3'b000;
-			estado <= state;
-		end
-		MemoryRead:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			irWrite = 1'b1;
-			aluControl = 3'b001;
-			estado <= state;
-		end
-		WaitMemoryRead:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			irWrite = 1'b1;
-			aluControl = 3'b001;
-			estado <= state;
-		end
-		IRWrite:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b1;
-			irWrite = 1'b1;
-			aluControl = 3'b001;
-			estado <= state;
-		end
-		Decode:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			irWrite = 1'b0;
-			aluControl = 3'b001;
-			aluSrcA = 1'b0;
-			aluSrcB = 2'b11;
-			regAluControl = 1'b1;
-			writeA = 1'b1;
-			writeB = 1'b1;
-			estado <= state;
-		end
-		Add:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			irWrite = 1'b0;
+			Reset:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
 			
-			aluControl = 3'b001;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b00;
-			writeA = 1'b0;
-			writeB = 1'b0;
-			regAluControl = 1'b1;
-			estado <= state;
-		end
-		And:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			irWrite = 1'b0;
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b1;
+				aluControl = 3'b000;
+				estado <= state;
+			end
+			MemoryRead:
+			begin
+
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
 			
-			aluControl = 3'b011;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b00;
-			writeA = 1'b0;
-			writeB = 1'b0;
-			regAluControl = 1'b1;
-			estado <= state;
-		end
-		Sub:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			irWrite = 1'b0;
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b1;
+				aluControl = 3'b001;
+				estado <= state;
+			end
+			WaitMemoryRead:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b1;
+				aluControl = 3'b001;
+				estado <= state;
+			end
+			IRWrite:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
 			
-			aluControl = 3'b010;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b00;
-			writeA = 1'b0;
-			writeB = 1'b0;
-			regAluControl = 1'b1;
-			estado <= state;
-		end
-		Xor:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			irWrite = 1'b0;
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b1;
+				irWrite = 1'b1;
+				aluControl = 3'b001;
+				estado <= state;
+			end
+			Decode:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b0;
+				aluSrcB = 2'b11;
+				regAluControl = 1'b1;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				estado <= state;
+			end
+			Add:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b0;
+				
+				aluControl = 3'b001;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b00;
+				writeA = 1'b0;
+				writeB = 1'b0;
+				regAluControl = 1'b1;
+				estado <= state;
+			end
+			And:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
 			
-			aluControl = 3'b110;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b00;
-			writeA = 1'b0;
-			writeB = 1'b0;
-			regAluControl = 1'b1;
-			estado <= state;
-		end
-		Break: 
-		begin			
-			estado <= state;
-		end
-		Nop:
-		begin			
-			estado <= state;
-		end
-		WriteRegAlu:
-		begin
-			regDst = 1'b1;
-			regWrite = 1'b1;
-			memToReg = 2'b00;
-			estado <= state;
-		end
-		Beq:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			pcCond = 1'b1;
-			origPC = 2'b01;
-			irWrite = 1'b0;
-			aluControl = 3'b010;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b00;
-			regAluControl = 1'b0;
-			writeA = 1'b0;
-			writeB = 1'b0;
-			bneORbeq = 1'b1;
-			estado <= state;
-		end
-		Bne:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			pcCond = 1'b1;
-			origPC = 2'b01;
-			irWrite = 1'b0;
-			aluControl = 3'b010;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b00;
-			regAluControl = 1'b0;
-			writeA = 1'b0;
-			writeB = 1'b0;
-			bneORbeq = 1'b0;
-			estado <= state;
-		end
-		LW:
-		begin
-			memWriteOrRead = 1'b0;
-			pcControl = 1'b0;
-			pcCond = 1'b0;
-			origPC = 2'b00;
-			irWrite = 1'b0;
-			aluControl = 3'b001;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b10;
-			regAluControl = 1'b1;
-			writeA = 1'b1;
-			writeB = 1'b0;
-			bneORbeq = 1'b0;
-			estado <= state;
-		end
-		LW_step2:
-		begin
-			memWriteOrRead = 1'b0;
-			mdrControl = 1'b1;
-			pcControl = 1'b0;
-			pcCond = 1'b0;
-			origPC = 2'b00;
-			irWrite = 1'b0;
-			aluControl = 3'b001;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b10;
-			regAluControl = 1'b0;
-			writeA = 1'b1;
-			writeB = 1'b0;
-			bneORbeq = 1'b0;
-			IorD = 1'b1;
-			estado <= state;
-		end
-		LW_step3_wait:
-		begin
-			memWriteOrRead = 1'b0;
-			mdrControl = 1'b1;
-			pcControl = 1'b0;
-			pcCond = 1'b0;
-			origPC = 2'b00;
-			irWrite = 1'b0;
-			aluControl = 3'b001;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b10;
-			regAluControl = 1'b0;
-			writeA = 1'b1;
-			writeB = 1'b0;
-			bneORbeq = 1'b0;
-			IorD = 1'b1;
-			estado <= state;
-		end
-		LW_step4:
-		begin
-			memWriteOrRead = 1'b0;
-			mdrControl = 1'b0;
-			memToReg = 2'b01;
-			pcControl = 1'b0;
-			pcCond = 1'b0;
-			origPC = 2'b00;
-			irWrite = 1'b0;
-			aluControl = 3'b001;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b10;
-			regAluControl = 1'b0;
-			writeA = 1'b1;
-			writeB = 1'b0;
-			regDst = 1'b0;
-			regWrite = 1'b1;
-			bneORbeq = 1'b0;
-			IorD = 1'b1;
-			estado <= state;
-		end
-		SW:
-		begin
-			memWriteOrRead = 1'b0;
-			mdrControl = 1'b0;
-			memToReg = 2'b01;
-			pcControl = 1'b0;
-			pcCond = 1'b0;
-			origPC = 2'b00;
-			irWrite = 1'b0;
-			aluControl = 3'b001;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b10;
-			regAluControl = 1'b1;
-			writeA = 1'b1;
-			writeB = 1'b0;
-			regDst = 1'b0;
-			regWrite = 1'b0;
-			bneORbeq = 1'b0;
-			IorD = 1'b1;
-			estado <= state;
-		end
-		SW_step2:
-		begin
-			memWriteOrRead = 1'b1;
-			mdrControl = 1'b0;
-			memToReg = 2'b01;
-			pcControl = 1'b0;
-			pcCond = 1'b0;
-			origPC = 2'b00;
-			irWrite = 1'b0;
-			aluControl = 3'b001;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b10;
-			regAluControl = 1'b0;
-			writeA = 1'b1;
-			writeB = 1'b1;
-			regDst = 1'b0;
-			regWrite = 1'b0;
-			bneORbeq = 1'b0;
-			IorD = 1'b1;
-			estado <= state;
-		end
-		SW_step3_wait:
-		begin
-			memWriteOrRead = 1'b1;
-			mdrControl = 1'b0;
-			memToReg = 2'b01;
-			pcControl = 1'b0;
-			pcCond = 1'b0;
-			origPC = 2'b00;
-			irWrite = 1'b0;
-			aluControl = 3'b001;
-			aluSrcA = 1'b1;
-			aluSrcB = 2'b10;
-			regAluControl = 1'b0;
-			writeA = 1'b1;
-			writeB = 1'b1;
-			regDst = 1'b0;
-			regWrite = 1'b0;
-			bneORbeq = 1'b0;
-			IorD = 1'b1;
-			estado <= state;
-		end
-		Lui:
-		begin
-			memWriteOrRead = 1'b0;
-			mdrControl = 1'b0;
-			memToReg = 2'b10;
-			pcControl = 1'b0;
-			pcCond = 1'b0;
-			origPC = 2'b00;
-			irWrite = 1'b0;
-			aluControl = 3'b001;
-			aluSrcA = 1'b0;
-			aluSrcB = 2'b00;
-			regAluControl = 1'b0;
-			writeA = 1'b1;
-			writeB = 1'b1;
-			regDst = 1'b0;
-			regWrite = 1'b1;
-			bneORbeq = 1'b0;
-			IorD = 1'b1;
-			estado <= state;
-		end
-		J:
-		begin
-			origPC = 2'b00;
-			pcControl = 1'b1;
-			estado <= state;
-		end
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b0;
+				
+				aluControl = 3'b011;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b00;
+				writeA = 1'b0;
+				writeB = 1'b0;
+				regAluControl = 1'b1;
+				estado <= state;
+			end
+			Sub:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b0;
+				
+				aluControl = 3'b010;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b00;
+				writeA = 1'b0;
+				writeB = 1'b0;
+				regAluControl = 1'b1;
+				estado <= state;
+			end
+			Xor:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b0;
+				
+				aluControl = 3'b110;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b00;
+				writeA = 1'b0;
+				writeB = 1'b0;
+				regAluControl = 1'b1;
+				estado <= state;
+			end
+			Break: 
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b00;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b0;
+				
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b0;
+				
+				aluControl = 3'b000;
+				aluSrcA = 1'b0;
+				aluSrcB = 2'b00;
+				writeA = 1'b0;
+				writeB = 1'b0;
+				regAluControl = 1'b0;	
+				estado <= state;
+			end
+			Nop:
+			begin	
+				mdrControl = 1'b0;
+				memToReg = 2'b00;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b0;
+				
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b0;
+				
+				aluControl = 3'b000;
+				aluSrcA = 1'b0;
+				aluSrcB = 2'b00;
+				writeA = 1'b0;
+				writeB = 1'b0;
+				regAluControl = 1'b0;	
+				estado <= state;
+			end
+			WriteRegAlu:
+			begin
+				mdrControl = 1'b0;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+			
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				irWrite = 1'b1;
+				aluControl = 3'b000;
+			
+				regDst = 1'b1;
+				regWrite = 1'b1;
+				memToReg = 2'b00;
+				estado <= state;
+			end
+			Beq:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				IorD = 1'b1;
+			
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				pcCond = 1'b1;
+				origPC = 2'b01;
+				irWrite = 1'b0;
+				aluControl = 3'b010;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b00;
+				regAluControl = 1'b0;
+				writeA = 1'b0;
+				writeB = 1'b0;
+				bneORbeq = 1'b1;
+				estado <= state;
+			end
+			Bne:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				IorD = 1'b1;
+				
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				pcCond = 1'b1;
+				origPC = 2'b01;
+				irWrite = 1'b0;
+				aluControl = 3'b010;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b00;
+				regAluControl = 1'b0;
+				writeA = 1'b0;
+				writeB = 1'b0;
+				bneORbeq = 1'b0;
+				estado <= state;
+			end
+			LW:
+			begin
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				IorD = 1'b1;
+			
+				memWriteOrRead = 1'b0;
+				pcControl = 1'b0;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b1;
+				writeA = 1'b1;
+				writeB = 1'b0;
+				bneORbeq = 1'b0;
+				estado <= state;
+			end
+			LW_step2:
+			begin
+				memToReg = 2'b01;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				
+				memWriteOrRead = 1'b0;
+				mdrControl = 1'b1;
+				pcControl = 1'b0;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				estado <= state;
+			end
+			LW_step3_wait:
+			begin
+				memToReg = 2'b01;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+			
+				memWriteOrRead = 1'b0;
+				mdrControl = 1'b1;
+				pcControl = 1'b0;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				estado <= state;
+			end
+			LW_step4:
+			begin				
+				memWriteOrRead = 1'b0;
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcControl = 1'b0;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b0;
+				regDst = 1'b0;
+				regWrite = 1'b1;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				estado <= state;
+			end
+			SW:
+			begin
+				memWriteOrRead = 1'b0;
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcControl = 1'b0;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b1;
+				writeA = 1'b1;
+				writeB = 1'b0;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				estado <= state;
+			end
+			SW_step2:
+			begin
+				memWriteOrRead = 1'b1;
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcControl = 1'b0;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				estado <= state;
+			end
+			SW_step3_wait:
+			begin
+				memWriteOrRead = 1'b1;
+				mdrControl = 1'b0;
+				memToReg = 2'b01;
+				pcControl = 1'b0;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b1;
+				aluSrcB = 2'b10;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				regDst = 1'b0;
+				regWrite = 1'b0;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				estado <= state;
+			end
+			Lui:
+			begin
+				memWriteOrRead = 1'b0;
+				mdrControl = 1'b0;
+				memToReg = 2'b10;
+				pcControl = 1'b0;
+				pcCond = 1'b0;
+				origPC = 2'b00;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b0;
+				aluSrcB = 2'b00;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				regDst = 1'b0;
+				regWrite = 1'b1;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				estado <= state;
+			end
+			J:
+			begin
+				memWriteOrRead = 1'b0;
+				mdrControl = 1'b0;
+				memToReg = 2'b10;
+				pcCond = 1'b0;
+				irWrite = 1'b0;
+				aluControl = 3'b001;
+				aluSrcA = 1'b0;
+				aluSrcB = 2'b00;
+				regAluControl = 1'b0;
+				writeA = 1'b1;
+				writeB = 1'b1;
+				regDst = 1'b0;
+				regWrite = 1'b1;
+				bneORbeq = 1'b0;
+				IorD = 1'b1;
+				
+				origPC = 2'b00;
+				pcControl = 1'b1;
+				estado <= state;
+			end	
 		endcase
 	end
 		

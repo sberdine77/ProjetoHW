@@ -13,7 +13,6 @@ module unidadeControle
 	output logic writeB,
 	output logic regWrite,
 	output logic aluSrcA,
-	output logic aluOutControl,
 	output logic [1:0] aluSrcB,
 	output logic [2:0] aluControl,
 	output logic regAluControl,
@@ -148,7 +147,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b0;
 			aluSrcB = 2'b11;
-			aluOutControl = 1'b1;
+			regAluControl = 1'b1;
 			writeA = 1'b1;
 			writeB = 1'b1;
 			estado <= state;
@@ -234,7 +233,7 @@ module unidadeControle
 			aluControl = 3'b010;
 			aluSrcA = 1'b1;
 			aluSrcB = 2'b00;
-			aluOutControl = 1'b0;
+			regAluControl = 1'b0;
 			writeA = 1'b0;
 			writeB = 1'b0;
 			bneORbeq = 1'b1;
@@ -250,7 +249,7 @@ module unidadeControle
 			aluControl = 3'b010;
 			aluSrcA = 1'b1;
 			aluSrcB = 2'b00;
-			aluOutControl = 1'b0;
+			regAluControl = 1'b0;
 			writeA = 1'b0;
 			writeB = 1'b0;
 			bneORbeq = 1'b0;
@@ -266,7 +265,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b1;
 			aluSrcB = 2'b10;
-			aluOutControl = 1'b1;
+			regAluControl = 1'b1;
 			writeA = 1'b1;
 			writeB = 1'b0;
 			bneORbeq = 1'b0;
@@ -283,7 +282,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b1;
 			aluSrcB = 2'b10;
-			aluOutControl = 1'b0;
+			regAluControl = 1'b0;
 			writeA = 1'b1;
 			writeB = 1'b0;
 			bneORbeq = 1'b0;
@@ -301,7 +300,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b1;
 			aluSrcB = 2'b10;
-			aluOutControl = 1'b0;
+			regAluControl = 1'b0;
 			writeA = 1'b1;
 			writeB = 1'b0;
 			bneORbeq = 1'b0;
@@ -320,7 +319,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b1;
 			aluSrcB = 2'b10;
-			aluOutControl = 1'b0;
+			regAluControl = 1'b0;
 			writeA = 1'b1;
 			writeB = 1'b0;
 			regDst = 1'b0;
@@ -341,7 +340,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b1;
 			aluSrcB = 2'b10;
-			aluOutControl = 1'b1;
+			regAluControl = 1'b1;
 			writeA = 1'b1;
 			writeB = 1'b0;
 			regDst = 1'b0;
@@ -362,7 +361,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b1;
 			aluSrcB = 2'b10;
-			aluOutControl = 1'b0;
+			regAluControl = 1'b0;
 			writeA = 1'b1;
 			writeB = 1'b1;
 			regDst = 1'b0;
@@ -383,7 +382,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b1;
 			aluSrcB = 2'b10;
-			aluOutControl = 1'b0;
+			regAluControl = 1'b0;
 			writeA = 1'b1;
 			writeB = 1'b1;
 			regDst = 1'b0;
@@ -404,7 +403,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b0;
 			aluSrcB = 2'b00;
-			aluOutControl = 1'b0;
+			regAluControl = 1'b0;
 			writeA = 1'b1;
 			writeB = 1'b1;
 			regDst = 1'b0;

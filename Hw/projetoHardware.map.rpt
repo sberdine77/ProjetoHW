@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projetoHardware
-Tue Apr 18 10:01:39 2017
+Tue Apr 18 10:59:38 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Apr 18 10:01:39 2017            ;
+; Analysis & Synthesis Status        ; Failed - Tue Apr 18 10:59:38 2017            ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; projetoHardware                              ;
 ; Top-level Entity Name              ; dataPath                                     ;
@@ -139,7 +139,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 2      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -150,7 +150,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Apr 18 10:01:37 2017
+    Info: Processing started: Tue Apr 18 10:59:37 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projetoHardware -c projetoHardware
 Info: Found 2 design units, including 1 entities, in source file componentes do projeto/banco_reg.vhd
     Info: Found design unit 1: Banco_reg-behavioral_arch
@@ -193,58 +193,59 @@ Warning (10236): Verilog HDL Implicit Net warning at dataPath.sv(167): created i
 Info: Elaborating entity "dataPath" for the top level hierarchy
 Warning (10034): Output port "IRWrite" at dataPath.sv(6) has no driver
 Info: Elaborating entity "unidadeControle" for hierarchy "unidadeControle:unidadeControle"
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "memWriteOrRead", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "pcControl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "irWrite", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "aluControl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "aluSrcA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "aluSrcB", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "regAluControl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "writeA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "writeB", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "regDst", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "regWrite", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "memToReg", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "pcCond", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "origPC", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "bneORbeq", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "mdrControl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "IorD", which holds its previous value in one or more paths through the always construct
-Error (10166): SystemVerilog RTL Coding error at unidadeControle.sv(109): always_comb construct does not infer purely combinational logic File: C:/Users/Amanda Lasserre/Desktop/p/ProjetoHW/Hw/unidadeControle.sv Line: 109
-Info (10041): Inferred latch for "IorD" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "mdrControl" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "bneORbeq" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "origPC[0]" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "origPC[1]" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "pcCond" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "memToReg[0]" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "memToReg[1]" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "regWrite" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "regDst" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "writeB" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "writeA" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "regAluControl" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "aluSrcB[0]" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "aluSrcB[1]" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "aluSrcA" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "aluControl[0]" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "aluControl[1]" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "aluControl[2]" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "irWrite" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "pcControl" at unidadeControle.sv(109)
-Info (10041): Inferred latch for "memWriteOrRead" at unidadeControle.sv(109)
-Error: Can't elaborate user hierarchy "unidadeControle:unidadeControle" File: C:/Users/Amanda Lasserre/Desktop/p/ProjetoHW/Hw/dataPath.sv Line: 71
-Info: Generated suppressed messages file C:/Users/Amanda Lasserre/Desktop/p/ProjetoHW/Hw/projetoHardware.map.smsg
-Error: Quartus II Analysis & Synthesis was unsuccessful. 2 errors, 19 warnings
-    Error: Peak virtual memory: 259 megabytes
-    Error: Processing ended: Tue Apr 18 10:01:39 2017
-    Error: Elapsed time: 00:00:02
+Info: Elaborating entity "Ula32" for hierarchy "Ula32:Ula"
+Info: Elaborating entity "Banco_reg" for hierarchy "Banco_reg:BancoReg"
+Info: Elaborating entity "Registrador" for hierarchy "Registrador:PC"
+Info: Elaborating entity "MuxPC" for hierarchy "MuxPC:MuxPc"
+Info: Elaborating entity "MuxInsReg" for hierarchy "MuxInsReg:MuxInsReg"
+Info: Elaborating entity "MuxDataWrite" for hierarchy "MuxDataWrite:MuxDataWrite"
+Warning (10270): Verilog HDL Case Statement warning at MuxDataWrite.sv(12): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at MuxDataWrite.sv(12): inferring latch(es) for variable "WriteDataMem", which holds its previous value in one or more paths through the always construct
+Error (10166): SystemVerilog RTL Coding error at MuxDataWrite.sv(12): always_comb construct does not infer purely combinational logic File: C:/Users/TEMP.CIN.155/Desktop/hw/ProjetoHW/Hw/MuxDataWrite.sv Line: 12
+Info (10041): Inferred latch for "WriteDataMem[0]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[1]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[2]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[3]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[4]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[5]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[6]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[7]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[8]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[9]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[10]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[11]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[12]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[13]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[14]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[15]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[16]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[17]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[18]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[19]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[20]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[21]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[22]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[23]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[24]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[25]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[26]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[27]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[28]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[29]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[30]" at MuxDataWrite.sv(12)
+Info (10041): Inferred latch for "WriteDataMem[31]" at MuxDataWrite.sv(12)
+Error: Can't elaborate user hierarchy "MuxDataWrite:MuxDataWrite" File: C:/Users/TEMP.CIN.155/Desktop/hw/ProjetoHW/Hw/dataPath.sv Line: 146
+Info: Generated suppressed messages file C:/Users/TEMP.CIN.155/Desktop/hw/ProjetoHW/Hw/projetoHardware.map.smsg
+Error: Quartus II Analysis & Synthesis was unsuccessful. 2 errors, 4 warnings
+    Error: Peak virtual memory: 237 megabytes
+    Error: Processing ended: Tue Apr 18 10:59:38 2017
+    Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Amanda Lasserre/Desktop/p/ProjetoHW/Hw/projetoHardware.map.smsg.
+The suppressed messages can be found in C:/Users/TEMP.CIN.155/Desktop/hw/ProjetoHW/Hw/projetoHardware.map.smsg.
 
 
