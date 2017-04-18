@@ -5,8 +5,10 @@ module dataPath
 	output logic WriteOrReadOut, PCControlOut, IRWrite
 	);
 	
+	logic [31:0] winPC;
 	logic [31:0] wPc;
 	logic [1:0] wPCSource;
+	logic [31:0] wALU;
 	logic [31:0] wALUOut;
 	logic [31:0] wAddress;
 	logic [2:0] wALUControl;
@@ -21,6 +23,7 @@ module dataPath
 	logic [16:0] wInstrucao15_0;
 	logic wIorD;
 	logic [5:0] wfunct;
+	logic [31:0] wWriteReg;
 	logic wRegALUControl;
 	logic wRegA;
 	logic wRegB;
@@ -83,7 +86,7 @@ module dataPath
 	(	.Clk(clock),
 		.Reset(res),
 		.Load(wPCControl),
-		.Entrada(wALUOut),
+		.Entrada(winPC),
 		.Saida(wPc)
 		);
 		

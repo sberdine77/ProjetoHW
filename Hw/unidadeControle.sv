@@ -9,7 +9,7 @@ module unidadeControle
 	output logic writeB,
 	output logic aluSrcA,
 	output logic aluOutControl,
-	output logic [1:0]  aluSrcB,
+	output logic [1:0] aluSrcB,
 	output logic [2:0] aluControl,
 	output logic regAluControl,
 	output logic regDst,
