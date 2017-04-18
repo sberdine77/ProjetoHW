@@ -143,7 +143,7 @@ module dataPath
 		.MDR(wMemDataOut),
 		.MemtoReg(wMemToReg),
 		.WriteDataMem(wWriteData)
-);
+	);
 	
 	MuxA MuxA
 	(
