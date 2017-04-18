@@ -18,10 +18,10 @@ module unidadeControle
 	output logic aluOutControl,
 	output logic [1:0]  aluSrcB,
 	output logic [2:0] aluControl,
-	output logic [2:0] estado);
+	output logic [5:0] estado);
 
 	
-	enum logic [2:0] {
+	enum logic [5:0] {
 	Reset, //0
 	MemoryRead, //1
 	WaitMemoryRead, //2
@@ -42,7 +42,8 @@ module unidadeControle
 	LW_step4,	//17
 	SW,		//18
 	SW_step2,	//19
-	SW_step3_wait	//20
+	SW_step3_wait,	//20
+	Lui,	//21
 	} state;
 	
 	initial state <= Reset;
@@ -75,7 +76,7 @@ module unidadeControle
 					6'h5: state <= Bne;			//bne
 					6'h23: state <=	LW;			//lw
 					6'h2b: state <=	SW;		//sw
-					6'hf: state <=			//lui
+					6'hf: state <= Lui;			//lui
 					6'h2: state <=			//jump
 				endcase
 			end
@@ -88,6 +89,7 @@ module unidadeControle
 			SW: state <= SW_step2;
 			SW_step2: state <= SW_step3_wait;
 			SW_step3_wait: state <= MemoryRead;
+			Lui: state <= MemoryRead;
 			endcase
 		end
 	end
@@ -304,6 +306,27 @@ module unidadeControle
 			writeB = 1'b1;
 			regDest = 1'b0;
 			regWrite = 1'b0;
+			bneORbeq = 1'b0;
+			IorD = 1'b1;
+			estado <= state;
+		end
+		Lui:
+		begin
+			memWriteOrRead = 1'b0;
+			mdrControl = 1'b0;
+			memToReg = 2'b10;
+			pcControl = 1'b0;
+			pcCond = 1'b0;
+			origPC = 2'b00;
+			irWrite = 1'b0;
+			aluControl = 3'b001;
+			aluSrcA = 1'b0;
+			aluSrcB = 2'b00;
+			aluOutControl = 1'b0;
+			writeA = 1'b1;
+			writeB = 1'b1;
+			regDest = 1'b0;
+			regWrite = 1'b1;
 			bneORbeq = 1'b0;
 			IorD = 1'b1;
 			estado <= state;

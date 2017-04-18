@@ -19,12 +19,18 @@ module dataPath
 	logic [4:0] wInstrucao20_16;
 	logic [16:0] wInstrucao15_0;
 	logic wIorD;
+	logic [5:0] wfunct;
+	
+	assign wfunct = wInstrucao15_0[5:0];
 	
 	unidadeControle unidadeControle
 	(	.clk(clock),
 		.reset(res),
+		.opcode(wInstrucao31_26),
+		.funct(wfunct),
 		.memWriteOrRead(wWriteOrRead),
 		.pcControl(wPCControl),
+		.irWrite(wIRWrite),
 		.aluControl(wALUControl),
 		.estado(wState)
 		);
