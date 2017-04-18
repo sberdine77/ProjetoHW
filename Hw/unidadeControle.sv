@@ -44,6 +44,7 @@ module unidadeControle
 	SW_step2,	//19
 	SW_step3_wait,	//20
 	Lui,	//21
+	J
 	} state;
 	
 	initial state <= Reset;
@@ -75,9 +76,9 @@ module unidadeControle
 					6'h4: state <= Beq;			//beq
 					6'h5: state <= Bne;			//bne
 					6'h23: state <=	LW;			//lw
-					6'h2b: state <=	SW;		//sw
+					6'h2b: state <=	SW;			//sw
 					6'hf: state <= Lui;			//lui
-					6'h2: state <=			//jump
+					6'h2: state <=	J;			//jump
 				endcase
 			end
 			Beq: state <= MemoryRead;
@@ -90,6 +91,7 @@ module unidadeControle
 			SW_step2: state <= SW_step3_wait;
 			SW_step3_wait: state <= MemoryRead;
 			Lui: state <= MemoryRead;
+			J: state <= MemoryRead;
 			endcase
 		end
 	end
@@ -331,7 +333,12 @@ module unidadeControle
 			IorD = 1'b1;
 			estado <= state;
 		end
-
+		J:
+		begin
+			origPC = 2'b00;
+			pcControl = 1'b1;
+			estado <= state;
+		end
 
 		endcase
 	end

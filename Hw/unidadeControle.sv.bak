@@ -18,10 +18,10 @@ module unidadeControle
 	output logic aluOutControl,
 	output logic [1:0]  aluSrcB,
 	output logic [2:0] aluControl,
-	output logic [2:0] estado);
+	output logic [5:0] estado);
 
 	
-	enum logic [2:0] {
+	enum logic [5:0] {
 	Reset, //0
 	MemoryRead, //1
 	WaitMemoryRead, //2
