@@ -11,14 +11,14 @@ module unidadeControle
 	output logic [1:0]  aluSrcB,
 	output logic [2:0] aluControl,
 	output logic regAluControl,
-	output logic [] regDst,
-	output logic [] regWrite,
+	output logic regDst,
+	output logic regWrite,
 	output logic memToReg,
 	
-	output logic [2:0] estado);
+	output logic [5:0] estado);
 
 	
-	enum logic [2:0] {
+	enum logic [5:0] {
 	Reset, //0
 	MemoryRead, //1
 	WaitMemoryRead, //2
@@ -47,24 +47,24 @@ module unidadeControle
 			IRWrite: state <= Decode;
 			Decode:
 			begin
-				case(opcode):
+				case(opcode)
 					6'h0:
 					begin
 						case(funct)
-						6'h20: state <=	Add		//add
-						6'h24: state <= And		//and
-						6'h22: state <= Sub		//sub
-						6'h26: state <=	Xor		//xor
-						6'hd: state <= Break	//break
-						6'h0: state <= Nop		//nop
+						6'h20: state <=	Add;		//add
+						6'h24: state <= And;		//and
+						6'h22: state <= Sub;		//sub
+						6'h26: state <=	Xor;		//xor
+						6'hd: state <= Break;	//break
+						6'h0: state <= Nop;		//nop
 						endcase
 					end
-					6'h4: state <=			//beq
-					6'h5: state <=			//bne
-					6'h23: state <=			//lw
-					6'h2b: state <=			//sw
-					6'hf: state <=			//lui
-					6'h2: state <=			//jump
+					//6'h4: state <=			//beq
+					//6'h5: state <=			//bne
+					//6'h23: state <=			//lw
+					//6'h2b: state <=			//sw
+					//6'hf: state <=			//lui
+					//6'h2: state <=			//jump
 				endcase
 				state <= MemoryRead;
 			end
@@ -133,7 +133,7 @@ module unidadeControle
 			writeB = 1'b0;
 			regAluControl = 1'b1;
 			estado <= state;
-			state <= WriteRegAlu
+			state <= WriteRegAlu;
 		end
 		And:
 		begin
@@ -148,7 +148,7 @@ module unidadeControle
 			writeB = 1'b0;
 			regAluControl = 1'b1;
 			estado <= state;
-			state <= WriteRegAlu
+			state <= WriteRegAlu;
 		end
 		Sub:
 		begin
@@ -163,7 +163,7 @@ module unidadeControle
 			writeB = 1'b0;
 			regAluControl = 1'b1;
 			estado <= state;
-			state <= WriteRegAlu
+			state <= WriteRegAlu;
 		end
 		Xor:
 		begin
@@ -178,7 +178,7 @@ module unidadeControle
 			writeB = 1'b0;
 			regAluControl = 1'b1;
 			estado <= state;
-			state <= WriteRegAlu
+			state <= WriteRegAlu;
 		end
 		Break: 
 		begin			
@@ -192,9 +192,12 @@ module unidadeControle
 		end
 		WriteRegAlu:
 		begin
-			regDest
+			regDst = 1'b1;
+			regWrite = 1'b1;
+			memToReg = 1'b0;
+			estado <= state;
+			state <= MemoryRead;
 		end
-		
 		endcase
 	end
 		

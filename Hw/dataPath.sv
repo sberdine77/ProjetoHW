@@ -32,6 +32,10 @@ module dataPath
 	logic [31:0] wRegBOut;	
 	logic wAluSrcA;
 	logic [1:0] wAluSrcB;
+	logic wMemToReg;
+	logic [31:0] wWriteData;
+	logic wRegDst;
+	logic wRegWrite;
 	
 	assign wfunct = wInstrucao15_0[5:0];
 	
@@ -49,6 +53,9 @@ module dataPath
 		.aluSrcB(wAluSrcB),
 		.aluControl(wALUControl),
 		.regAluControl(wRegALUControl),
+		.regDst(wRegDst),
+		.regWrite(wRegWrite),
+		.memToReg(wMemToReg),
 		.estado(wState)
 		); 
 		
@@ -59,6 +66,18 @@ module dataPath
 		.S(wALU)
 		);
 		
+	Banco_reg BancoReg
+	(
+			.Clk(clock),
+			.Reset(res),
+			.RegWrite(wRegWrite),
+			.ReadReg1(wInstrucao25_21),
+			.ReadReg2(wInstrucao20_16),
+			.WriteReg(wWriteReg),
+			.WriteData(wWriteData),
+			.ReadData1(wA),
+			.ReadData2(wB)
+	);
 	
 	Registrador PC
 	(	.Clk(clock),
@@ -99,12 +118,28 @@ module dataPath
 		.Address(wAddress)
 	);
 	
+	MuxInsReg MuxInsReg
+	(
+		.Inst20_16(wInstrucao20_16), 
+		.Funct(wfunct),
+		.RegDst(wRegDst),
+		.WriteReg(wWriteReg)
+	);
+	
+	MuxDataWrite MuxDataWrite
+	(
+		.ALUOutReg(wALUOut), 
+		.MDR(wMemDataOut),
+		.MemtoReg(wMemToReg),
+		.WriteDataMem(wWriteData)
+);
+	
 	MuxA MuxA
 	(
 		.PC(wPc),
 		.A(wAOut),
 		.ALUSrcA(wAluSrcA),
-		.AOut(wAOut),
+		.AOut(wAOut)
 	);
 	
 	MuxB MuxB

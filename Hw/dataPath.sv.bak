@@ -6,6 +6,7 @@ module dataPath
 	);
 	
 	logic [31:0] wPc;
+	logic [1:0] wPCSource;
 	logic [31:0] wALUOut;
 	logic [31:0] wAddress;
 	logic [2:0] wALUControl;
@@ -20,6 +21,17 @@ module dataPath
 	logic [16:0] wInstrucao15_0;
 	logic wIorD;
 	logic [5:0] wfunct;
+	logic wRegALUControl;
+	logic wRegA;
+	logic wRegB;
+	logic [31:0] wA;
+	logic [31:0] wB;
+	logic [31:0] wAOut;
+	logic [31:0] wBOut;
+	logic [31:0] wRegAOut;
+	logic [31:0] wRegBOut;	
+	logic wAluSrcA;
+	logic [1:0] wAluSrcB;
 	
 	assign wfunct = wInstrucao15_0[5:0];
 	
@@ -31,15 +43,20 @@ module dataPath
 		.memWriteOrRead(wWriteOrRead),
 		.pcControl(wPCControl),
 		.irWrite(wIRWrite),
+		.writeA(wRegA),
+		.writeB(wRegB),
+		.aluSrcA(wAluSrcA),
+		.aluSrcB(wAluSrcB),
 		.aluControl(wALUControl),
+		.regAluControl(wRegALUControl),
 		.estado(wState)
-		);
-	
+		); 
+		
 	Ula32 Ula
-	(	.A(wPc),
-		.B(3'b100),
+	(	.A(wAOut),
+		.B(wBOut),
 		.Seletor(wALUControl),
-		.S(wALUOut)
+		.S(wALU)
 		);
 		
 	
@@ -51,11 +68,59 @@ module dataPath
 		.Saida(wPc)
 		);
 		
+	Registrador A
+	(	.Clk(clock),
+		.Reset(res),
+		.Load(wRegA),
+		.Entrada(wA),
+		.Saida(wRegAOut)
+		);
+			
+	Registrador B
+	(	.Clk(clock),
+		.Reset(res),
+		.Load(wRegB),
+		.Entrada(wB),
+		.Saida(wRegBOut)
+		);	
+		
+	Registrador ALUOut
+	(	.Clk(clock),
+		.Reset(res),
+		.Load(wRegALUControl),
+		.Entrada(wALU),
+		.Saida(wALUOut)
+		);
+		
 	MuxPC MuxPc
 	(	.PC(wPc),
 		.AluOut(wALUOut),
 		.IorD(wIorD),
 		.Address(wAddress)
+	);
+	
+	MuxA MuxA
+	(
+		.PC(wPc),
+		.A(wAOut),
+		.ALUSrcA(wAluSrcA),
+		.AOut(wAOut),
+	);
+	
+	MuxB MuxB
+	(	.B(wBOut), 
+		.signalExt(), //I-TYPE WIRE
+		.desloc_esq(), //I-TYPE WIRE
+		.ALUSrcB(wAluSrcA),
+		.BOut(wBOut)
+	);
+	
+	MuxSaidaALU MuxSaidaAlu
+	(	.ALU(wALU), 
+		.ALUOut(wALUOut),
+		.RegDesloc(wRegDesloc), // nome fio desloc jump
+		.PCSource(wPCSource),
+		.inPC(winPC)
 	);
 	
 	Instr_Reg IR
