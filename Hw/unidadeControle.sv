@@ -4,6 +4,9 @@ module unidadeControle
 	input logic [5:0] funct, 
 	output logic memWriteOrRead,
 	output logic pcControl,
+	output logic pcCond,
+	output logic [1:0] origPC,
+	output logic bneORbeq,
 	output logic irWrite,
 	output logic writeA,
 	output logic writeB,
@@ -19,7 +22,16 @@ module unidadeControle
 	MemoryRead, //1
 	WaitMemoryRead, //2
 	IRWrite, //3
-	Decode //4
+	Decode, //4
+	Add, //5
+	And, //6
+	Sub, //7
+	Xor, //8
+	Break, //9
+	Nop, //10
+	WriteRegAlu, //11
+	Beq,	//12
+	Bne		//13
 	} state;
 	
 	initial state <= Reset;
@@ -48,16 +60,16 @@ module unidadeControle
 						6'h0: state <=		//nop
 						endcase
 					end
-					6'h4: state <=			//beq
-					6'h5: state <=			//bne
+					6'h4: state <= Beq;			//beq
+					6'h5: state <= Bne;			//bne
 					6'h23: state <=			//lw
 					6'h2b: state <=			//sw
 					6'hf: state <=			//lui
 					6'h2: state <=			//jump
 				endcase
-				state <= MemoryRead;
 			end
-			
+			Beq: state <= MemoryRead;
+			Bne: state <= MemoryRead;
 			endcase
 		end
 	end
@@ -110,6 +122,39 @@ module unidadeControle
 			writeB = 1'b1;
 			estado <= state;
 		end
+		Beq:
+		begin
+			memWriteOrRead = 1'b0;
+			pcControl = 1'b0;
+			pcCond = 1'b1;
+			origPC = 2'b01;
+			irWrite = 1'b0;
+			aluControl = 3'b010;
+			aluSrcA = 1'b1;
+			aluSrcB = 2'b00;
+			aluOutControl = 1'b0;
+			writeA = 1'b0;
+			writeB = 1'b0;
+			bneORbeq = 1'b1;
+			estado <= state;
+		end
+		Bne:
+		begin
+			memWriteOrRead = 1'b0;
+			pcControl = 1'b0;
+			pcCond = 1'b1;
+			origPC = 2'b01;
+			irWrite = 1'b0;
+			aluControl = 3'b010;
+			aluSrcA = 1'b1;
+			aluSrcB = 2'b00;
+			aluOutControl = 1'b0;
+			writeA = 1'b0;
+			writeB = 1'b0;
+			bneORbeq = 1'b0;
+			estado <= state;
+		end
+
 		endcase
 	end
 		

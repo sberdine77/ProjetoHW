@@ -8,6 +8,7 @@ module unidadeControle
 	output logic writeA,
 	output logic writeB,
 	output logic aluSrcA,
+	output logic aluOutControl,
 	output logic [1:0]  aluSrcB,
 	output logic [2:0] aluControl,
 	output logic [2:0] estado);
@@ -104,6 +105,7 @@ module unidadeControle
 			aluControl = 3'b001;
 			aluSrcA = 1'b0;
 			aluSrcB = 2'b11;
+			aluOutControl = 1'b1;
 			writeA = 1'b1;
 			writeB = 1'b1;
 			estado <= state;
