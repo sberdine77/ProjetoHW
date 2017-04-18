@@ -14,7 +14,6 @@ module unidadeControle
 	output logic regDst,
 	output logic regWrite,
 	output logic memToReg,
-	
 	output logic [5:0] estado);
 
 	
@@ -55,8 +54,8 @@ module unidadeControle
 						6'h24: state <= And;		//and
 						6'h22: state <= Sub;		//sub
 						6'h26: state <=	Xor;		//xor
-						6'hd: state <= Break;	//break
-						6'h0: state <= Nop;		//nop
+						6'hd: state <= Break;		//break
+						6'h0: state <= Nop;			//nop
 						endcase
 					end
 					//6'h4: state <=			//beq
@@ -68,6 +67,14 @@ module unidadeControle
 				endcase
 				state <= MemoryRead;
 			end
+			
+			Add: state <= WriteRegAlu;
+			And: state <= WriteRegAlu;
+			Sub: state <= WriteRegAlu;
+			Xor: state <= WriteRegAlu;
+			Break: state <= Break;
+			Nop: state <= MemoryRead;
+			WriteRegAlu: state <= MemoryRead;
 			
 			endcase
 		end
@@ -133,7 +140,6 @@ module unidadeControle
 			writeB = 1'b0;
 			regAluControl = 1'b1;
 			estado <= state;
-			state <= WriteRegAlu;
 		end
 		And:
 		begin
@@ -148,7 +154,6 @@ module unidadeControle
 			writeB = 1'b0;
 			regAluControl = 1'b1;
 			estado <= state;
-			state <= WriteRegAlu;
 		end
 		Sub:
 		begin
@@ -163,7 +168,6 @@ module unidadeControle
 			writeB = 1'b0;
 			regAluControl = 1'b1;
 			estado <= state;
-			state <= WriteRegAlu;
 		end
 		Xor:
 		begin
@@ -178,17 +182,14 @@ module unidadeControle
 			writeB = 1'b0;
 			regAluControl = 1'b1;
 			estado <= state;
-			state <= WriteRegAlu;
 		end
 		Break: 
 		begin			
 			estado <= state;
-			state <= Break;
 		end
 		Nop:
 		begin			
 			estado <= state;
-			state <= MemoryRead;
 		end
 		WriteRegAlu:
 		begin
@@ -196,7 +197,6 @@ module unidadeControle
 			regWrite = 1'b1;
 			memToReg = 1'b0;
 			estado <= state;
-			state <= MemoryRead;
 		end
 		endcase
 	end
