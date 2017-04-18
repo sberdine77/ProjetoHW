@@ -154,7 +154,7 @@ module dataPath
 		.ShiftLeft16(wShiftLeft16),
 		.MemtoReg(wMemToReg),
 		.WriteDataMem(wWriteData)
-	);
+);
 	
 	MuxA MuxA
 	(
