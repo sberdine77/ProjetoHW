@@ -13,7 +13,6 @@ always_comb
 		2'b00: inPC <= ALU;
 		2'b01: inPC <= ALUOut;
 		2'b10: inPC <= RegDesloc;
-		default: inPC <= ALU;
 		endcase
 	end
 

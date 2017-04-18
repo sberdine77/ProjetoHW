@@ -51,7 +51,7 @@ module dataPath
 		.opcode(wInstrucao31_26),
 		.funct(wfunct),
 		.memWriteOrRead(wWriteOrRead),
-		.mdrControl(wMDRControl),
+		.mdrControl(wWriteOrRead), //????
 		.pcControl(wPCControl),
 		.pcCond(wPCCond), 
 		.origPC(wPCSource),
@@ -98,14 +98,6 @@ module dataPath
 		.Saida(wPc)
 		);
 		
-	Registrador Mem
-	(	.Clk(clock),
-		.Reset(res),
-		.Load(wMDRControl),
-		.Entrada(wMemDataOut),
-		.Saida(wMDROut)
-		);	
-		
 	Registrador A
 	(	.Clk(clock),
 		.Reset(res),
@@ -148,11 +140,10 @@ module dataPath
 	MuxDataWrite MuxDataWrite
 	(
 		.ALUOutReg(wALUOut), 
-		.MDR(wMDROut),
-		//.ShiftLeft16(wShiftLeft16), //VERIFICAR!!!
+		.MDR(wMemDataOut),
 		.MemtoReg(wMemToReg),
 		.WriteDataMem(wWriteData)
-	);
+);
 	
 	MuxA MuxA
 	(
