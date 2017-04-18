@@ -13,6 +13,7 @@ always_comb
 		2'b00: WriteDataMem <= ALUOutReg;
 		2'b01: WriteDataMem <= MDR;
 		2'b10: WriteDataMem <= ShiftLeft16;
+		default: WriteDataMem <= ALUOutReg;
 		endcase
 	end
  

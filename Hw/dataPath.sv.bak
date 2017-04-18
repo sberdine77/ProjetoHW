@@ -40,6 +40,7 @@ module dataPath
 	logic wRegDst;
 	logic wRegWrite;
 	logic  wPCCond;
+	logic wBneORBeq;
 
 	
 	assign wfunct = wInstrucao15_0[5:0];
@@ -140,6 +141,7 @@ module dataPath
 	(
 		.ALUOutReg(wALUOut), 
 		.MDR(wMemDataOut),
+		.ShiftLeft16(wShiftLeft16),
 		.MemtoReg(wMemToReg),
 		.WriteDataMem(wWriteData)
 );

@@ -39,7 +39,7 @@ module dataPath
 	logic [31:0] wWriteData;
 	logic wRegDst;
 	logic wRegWrite;
-	logic  wPCCond;
+	logic wPCCond;
 	logic wBneORBeq;
 
 	
@@ -51,7 +51,7 @@ module dataPath
 		.opcode(wInstrucao31_26),
 		.funct(wfunct),
 		.memWriteOrRead(wWriteOrRead),
-		.mdrControl(wWriteOrRead), //????
+		.mdrControl(wMDRControl),
 		.pcControl(wPCControl),
 		.pcCond(wPCCond), 
 		.origPC(wPCSource),
@@ -69,6 +69,8 @@ module dataPath
 		.IorD(wIorD),		
 		.estado(wState)
 		); 
+		
+		
 		
 	Ula32 Ula
 	(	.A(wAOut),
@@ -96,6 +98,14 @@ module dataPath
 		.Load(wPCControl),
 		.Entrada(winPC),
 		.Saida(wPc)
+		);
+		
+	Registrador Mem
+	(	.Clk(clock),
+		.Reset(res),
+		.Load(wMDRControl),
+		.Entrada(wMemDataOut),
+		.Saida(wMDROut)
 		);
 		
 	Registrador A
@@ -141,6 +151,7 @@ module dataPath
 	(
 		.ALUOutReg(wALUOut), 
 		.MDR(wMemDataOut),
+		.ShiftLeft16(wShiftLeft16),
 		.MemtoReg(wMemToReg),
 		.WriteDataMem(wWriteData)
 );
