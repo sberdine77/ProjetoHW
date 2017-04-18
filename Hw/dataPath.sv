@@ -39,6 +39,9 @@ module dataPath
 	logic [31:0] wWriteData;
 	logic wRegDst;
 	logic wRegWrite;
+	logic  wPCCond;
+	logic wBneORBeq;
+
 	
 	assign wfunct = wInstrucao15_0[5:0];
 	
@@ -62,8 +65,8 @@ module dataPath
 		.aluControl(wALUControl),
 		.regAluControl(wRegALUControl),
 		.regDst(wRegDst),
-		.IorD(wIorD),		
 		.memToReg(wMemToReg),
+		.IorD(wIorD),		
 		.estado(wState)
 		); 
 		
