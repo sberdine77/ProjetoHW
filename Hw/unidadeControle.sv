@@ -3,6 +3,8 @@ module unidadeControle
 	input logic [5:0] opcode, 
 	input logic [5:0] funct, 
 	output logic memWriteOrRead,
+	output logic mdrControl,
+	output logic [1:0] memToReg,
 	output logic pcControl,
 	output logic pcCond,
 	output logic [1:0] origPC,
@@ -10,6 +12,8 @@ module unidadeControle
 	output logic irWrite,
 	output logic writeA,
 	output logic writeB,
+	output logic regDest,
+	output logic regWrite,
 	output logic aluSrcA,
 	output logic aluOutControl,
 	output logic [1:0]  aluSrcB,
@@ -31,7 +35,14 @@ module unidadeControle
 	Nop, //10
 	WriteRegAlu, //11
 	Beq,	//12
-	Bne		//13
+	Bne,	//13
+	LW,		//14
+	LW_step2,	//15
+	LW_step3_wait,	//16
+	LW_step4,	//17
+	SW,		//18
+	SW_step2,	//19
+	SW_step3_wait	//20
 	} state;
 	
 	initial state <= Reset;
@@ -62,14 +73,21 @@ module unidadeControle
 					end
 					6'h4: state <= Beq;			//beq
 					6'h5: state <= Bne;			//bne
-					6'h23: state <=			//lw
-					6'h2b: state <=			//sw
+					6'h23: state <=	LW;			//lw
+					6'h2b: state <=	SW;		//sw
 					6'hf: state <=			//lui
 					6'h2: state <=			//jump
 				endcase
 			end
 			Beq: state <= MemoryRead;
 			Bne: state <= MemoryRead;
+			LW: state <= LW_step2;
+			LW_step2: state <= LW_step3_wait;
+			LW_step3_wait: state <= LW_step4;
+			LW_step4: state <= MemoryRead;
+			SW: state <= SW_step2;
+			SW_step2: state <= SW_step3_wait;
+			SW_step3_wait: state <= MemoryRead;
 			endcase
 		end
 	end
@@ -154,6 +172,143 @@ module unidadeControle
 			bneORbeq = 1'b0;
 			estado <= state;
 		end
+		LW:
+		begin
+			memWriteOrRead = 1'b0;
+			pcControl = 1'b0;
+			pcCond = 1'b0;
+			origPC = 2'b00;
+			irWrite = 1'b0;
+			aluControl = 3'b001;
+			aluSrcA = 1'b1;
+			aluSrcB = 2'b10;
+			aluOutControl = 1'b1;
+			writeA = 1'b1;
+			writeB = 1'b0;
+			bneORbeq = 1'b0;
+			estado <= state;
+		end
+		LW_step2:
+		begin
+			memWriteOrRead = 1'b0;
+			mdrControl = 1'b1;
+			pcControl = 1'b0;
+			pcCond = 1'b0;
+			origPC = 2'b00;
+			irWrite = 1'b0;
+			aluControl = 3'b001;
+			aluSrcA = 1'b1;
+			aluSrcB = 2'b10;
+			aluOutControl = 1'b0;
+			writeA = 1'b1;
+			writeB = 1'b0;
+			bneORbeq = 1'b0;
+			IorD = 1'b1;
+			estado <= state;
+		end
+		LW_step3_wait:
+		begin
+			memWriteOrRead = 1'b0;
+			mdrControl = 1'b1;
+			pcControl = 1'b0;
+			pcCond = 1'b0;
+			origPC = 2'b00;
+			irWrite = 1'b0;
+			aluControl = 3'b001;
+			aluSrcA = 1'b1;
+			aluSrcB = 2'b10;
+			aluOutControl = 1'b0;
+			writeA = 1'b1;
+			writeB = 1'b0;
+			bneORbeq = 1'b0;
+			IorD = 1'b1;
+			estado <= state;
+		end
+		LW_step4:
+		begin
+			memWriteOrRead = 1'b0;
+			mdrControl = 1'b0;
+			memToReg = 2'b01;
+			pcControl = 1'b0;
+			pcCond = 1'b0;
+			origPC = 2'b00;
+			irWrite = 1'b0;
+			aluControl = 3'b001;
+			aluSrcA = 1'b1;
+			aluSrcB = 2'b10;
+			aluOutControl = 1'b0;
+			writeA = 1'b1;
+			writeB = 1'b0;
+			regDest = 1'b0;
+			regWrite = 1'b1;
+			bneORbeq = 1'b0;
+			IorD = 1'b1;
+			estado <= state;
+		end
+		SW:
+		begin
+			memWriteOrRead = 1'b0;
+			mdrControl = 1'b0;
+			memToReg = 2'b01;
+			pcControl = 1'b0;
+			pcCond = 1'b0;
+			origPC = 2'b00;
+			irWrite = 1'b0;
+			aluControl = 3'b001;
+			aluSrcA = 1'b1;
+			aluSrcB = 2'b10;
+			aluOutControl = 1'b1;
+			writeA = 1'b1;
+			writeB = 1'b0;
+			regDest = 1'b0;
+			regWrite = 1'b0;
+			bneORbeq = 1'b0;
+			IorD = 1'b1;
+			estado <= state;
+		end
+		SW_step2:
+		begin
+			memWriteOrRead = 1'b1;
+			mdrControl = 1'b0;
+			memToReg = 2'b01;
+			pcControl = 1'b0;
+			pcCond = 1'b0;
+			origPC = 2'b00;
+			irWrite = 1'b0;
+			aluControl = 3'b001;
+			aluSrcA = 1'b1;
+			aluSrcB = 2'b10;
+			aluOutControl = 1'b0;
+			writeA = 1'b1;
+			writeB = 1'b1;
+			regDest = 1'b0;
+			regWrite = 1'b0;
+			bneORbeq = 1'b0;
+			IorD = 1'b1;
+			estado <= state;
+		end
+		SW_step3_wait:
+		begin
+			memWriteOrRead = 1'b1;
+			mdrControl = 1'b0;
+			memToReg = 2'b01;
+			pcControl = 1'b0;
+			pcCond = 1'b0;
+			origPC = 2'b00;
+			irWrite = 1'b0;
+			aluControl = 3'b001;
+			aluSrcA = 1'b1;
+			aluSrcB = 2'b10;
+			aluOutControl = 1'b0;
+			writeA = 1'b1;
+			writeB = 1'b1;
+			regDest = 1'b0;
+			regWrite = 1'b0;
+			bneORbeq = 1'b0;
+			IorD = 1'b1;
+			estado <= state;
+		end
+
 
 		endcase
 	end
