@@ -57,7 +57,7 @@ module dataPath
 		.regWrite(wRegWrite),
 		.memToReg(wMemToReg),
 		.estado(wState)
-		); 
+		);
 		
 	Ula32 Ula
 	(	.A(wAOut),

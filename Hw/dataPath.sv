@@ -32,7 +32,7 @@ module dataPath
 	logic [31:0] wRegBOut;	
 	logic wAluSrcA;
 	logic [1:0] wAluSrcB;
-	logic wMemToReg;
+	logic [1:0] wMemToReg;
 	logic [31:0] wWriteData;
 	logic wRegDst;
 	logic wRegWrite;

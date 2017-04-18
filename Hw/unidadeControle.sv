@@ -14,7 +14,7 @@ module unidadeControle
 	output logic regAluControl,
 	output logic regDst,
 	output logic regWrite,
-	output logic memToReg,
+	output logic [1:0] memToReg,
 	output logic [5:0] estado);
 
 	
@@ -197,7 +197,7 @@ module unidadeControle
 		begin
 			regDst = 1'b1;
 			regWrite = 1'b1;
-			memToReg = 1'b0;
+			memToReg = 2'b00;
 			estado <= state;
 		end
 		endcase

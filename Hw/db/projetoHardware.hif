@@ -186,39 +186,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
-MuxDataWrite
-# storage
-db|projetoHardware.(3).cnf
-db|projetoHardware.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-muxdatawrite.sv
-619fb3d0fbc71b4ee48430804a752
-9
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# macro_sequence
-
-# end
-# entity
 Ula32
 # storage
 db|projetoHardware.(4).cnf
@@ -964,7 +931,7 @@ ON
 # case_sensitive
 # source_file
 datapath.sv
-a73abef7dad539cb1db7b9f247b63e
+7a2149d82a66dda94c0f32a40b3aa11
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
