@@ -1,4 +1,4 @@
-module DataWrite
+module MuxDataWrite
 (
 	input logic [31:0] ALUOutReg, 
 	input logic [31:0] MDR,
@@ -14,4 +14,4 @@ always_comb
 		endcase
 	end
  
-endmodule: DataWrite
+endmodule: MuxDataWrite
