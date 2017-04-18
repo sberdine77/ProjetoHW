@@ -48,19 +48,24 @@ module dataPath
 		.opcode(wInstrucao31_26),
 		.funct(wfunct),
 		.memWriteOrRead(wWriteOrRead),
+		.mdrControl(wWriteOrRead), //????
 		.pcControl(wPCControl),
+		.pcCond(wPCCond), 
+		.origPC(wPCSource),
+		.bneORbeq(wBneORBeq),
 		.irWrite(wIRWrite),
 		.writeA(wRegA),
 		.writeB(wRegB),
+		.regWrite(wRegWrite),
 		.aluSrcA(wAluSrcA),
 		.aluSrcB(wAluSrcB),
 		.aluControl(wALUControl),
 		.regAluControl(wRegALUControl),
 		.regDst(wRegDst),
-		.regWrite(wRegWrite),
+		.IorD(wIorD),		
 		.memToReg(wMemToReg),
 		.estado(wState)
-		);
+		); 
 		
 	Ula32 Ula
 	(	.A(wAOut),

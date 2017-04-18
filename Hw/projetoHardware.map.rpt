@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projetoHardware
-Tue Apr 18 07:57:33 2017
+Tue Apr 18 08:34:08 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Apr 18 07:57:33 2017            ;
+; Analysis & Synthesis Status        ; Failed - Tue Apr 18 08:34:08 2017            ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; projetoHardware                              ;
 ; Top-level Entity Name              ; dataPath                                     ;
@@ -150,7 +150,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Apr 18 07:57:32 2017
+    Info: Processing started: Tue Apr 18 08:34:07 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projetoHardware -c projetoHardware
 Info: Found 2 design units, including 1 entities, in source file componentes do projeto/banco_reg.vhd
     Info: Found design unit 1: Banco_reg-behavioral_arch
@@ -189,46 +189,57 @@ Info: Found 1 design units, including 1 entities, in source file muxsaidaalu.sv
     Info: Found entity 1: MuxSaidaALU
 Info: Found 1 design units, including 1 entities, in source file muxinsreg.sv
     Info: Found entity 1: MuxInsReg
-Warning (10236): Verilog HDL Implicit Net warning at dataPath.sv(159): created implicit net for "wRegDesloc"
+Warning (10236): Verilog HDL Implicit Net warning at dataPath.sv(53): created implicit net for "wPCCond"
+Warning (10236): Verilog HDL Implicit Net warning at dataPath.sv(55): created implicit net for "wBneORBeq"
+Warning (10236): Verilog HDL Implicit Net warning at dataPath.sv(164): created implicit net for "wRegDesloc"
 Info: Elaborating entity "dataPath" for the top level hierarchy
 Warning (10034): Output port "IRWrite" at dataPath.sv(6) has no driver
 Info: Elaborating entity "unidadeControle" for hierarchy "unidadeControle:unidadeControle"
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "memWriteOrRead", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "pcControl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "irWrite", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "aluControl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "aluSrcA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "aluSrcB", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "aluOutControl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "writeA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "writeB", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "regAluControl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "regDst", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "regWrite", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(86): inferring latch(es) for variable "memToReg", which holds its previous value in one or more paths through the always construct
-Error (10166): SystemVerilog RTL Coding error at unidadeControle.sv(86): always_comb construct does not infer purely combinational logic File: C:/Users/alessandrapereira/Documents/GitHub/ProjetoHW/Hw/unidadeControle.sv Line: 86
-Info (10041): Inferred latch for "memToReg[0]" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "memToReg[1]" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "regWrite" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "regDst" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "regAluControl" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "writeB" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "writeA" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "aluOutControl" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "aluSrcB[0]" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "aluSrcB[1]" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "aluSrcA" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "aluControl[0]" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "aluControl[1]" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "aluControl[2]" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "irWrite" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "pcControl" at unidadeControle.sv(86)
-Info (10041): Inferred latch for "memWriteOrRead" at unidadeControle.sv(86)
-Error: Can't elaborate user hierarchy "unidadeControle:unidadeControle" File: C:/Users/alessandrapereira/Documents/GitHub/ProjetoHW/Hw/dataPath.sv Line: 63
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "memWriteOrRead", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "pcControl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "irWrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "aluControl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "aluSrcA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "aluSrcB", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "regAluControl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "writeA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "writeB", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "regDst", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "regWrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "memToReg", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "pcCond", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "origPC", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "bneORbeq", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "mdrControl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at unidadeControle.sv(109): inferring latch(es) for variable "IorD", which holds its previous value in one or more paths through the always construct
+Error (10166): SystemVerilog RTL Coding error at unidadeControle.sv(109): always_comb construct does not infer purely combinational logic File: C:/Users/alessandrapereira/Documents/GitHub/ProjetoHW/Hw/unidadeControle.sv Line: 109
+Info (10041): Inferred latch for "IorD" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "mdrControl" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "bneORbeq" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "origPC[0]" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "origPC[1]" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "pcCond" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "memToReg[0]" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "memToReg[1]" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "regWrite" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "regDst" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "writeB" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "writeA" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "regAluControl" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "aluSrcB[0]" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "aluSrcB[1]" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "aluSrcA" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "aluControl[0]" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "aluControl[1]" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "aluControl[2]" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "irWrite" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "pcControl" at unidadeControle.sv(109)
+Info (10041): Inferred latch for "memWriteOrRead" at unidadeControle.sv(109)
+Error: Can't elaborate user hierarchy "unidadeControle:unidadeControle" File: C:/Users/alessandrapereira/Documents/GitHub/ProjetoHW/Hw/dataPath.sv Line: 68
 Info: Generated suppressed messages file C:/Users/alessandrapereira/Documents/GitHub/ProjetoHW/Hw/projetoHardware.map.smsg
-Error: Quartus II Analysis & Synthesis was unsuccessful. 2 errors, 15 warnings
-    Error: Peak virtual memory: 224 megabytes
-    Error: Processing ended: Tue Apr 18 07:57:33 2017
+Error: Quartus II Analysis & Synthesis was unsuccessful. 2 errors, 21 warnings
+    Error: Peak virtual memory: 225 megabytes
+    Error: Processing ended: Tue Apr 18 08:34:08 2017
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 

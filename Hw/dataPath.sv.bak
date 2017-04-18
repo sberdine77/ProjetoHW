@@ -1,19 +1,21 @@
 module dataPath 
 (	input logic clock, res,
 	output logic [31:0] PCOut, AluOutOut, MemDataOutOut,
-	output logic [2:0] StateOut,
+	output logic [5:0] StateOut,
 	output logic WriteOrReadOut, PCControlOut, IRWrite
 	);
 	
+	logic [31:0] winPC;
 	logic [31:0] wPc;
 	logic [1:0] wPCSource;
+	logic [31:0] wALU;
 	logic [31:0] wALUOut;
 	logic [31:0] wAddress;
 	logic [2:0] wALUControl;
 	logic wWriteOrRead;
 	logic wPCControl;
 	logic [31:0] wMemDataOut;
-	logic [2:0] wState;
+	logic [5:0] wState;
 	logic wIRWrite;
 	logic [5:0] wInstrucao31_26;
 	logic [4:0] wInstrucao25_21;
@@ -21,6 +23,7 @@ module dataPath
 	logic [16:0] wInstrucao15_0;
 	logic wIorD;
 	logic [5:0] wfunct;
+	logic [31:0] wWriteReg;
 	logic wRegALUControl;
 	logic wRegA;
 	logic wRegB;
@@ -45,19 +48,25 @@ module dataPath
 		.opcode(wInstrucao31_26),
 		.funct(wfunct),
 		.memWriteOrRead(wWriteOrRead),
+		.mdrControl(wWriteOrRead), //????
 		.pcControl(wPCControl),
+		.pcCond(wPCCond), 
+		.origPC(wPCSource),
+		.bneORbeq(wBneORBeq),
 		.irWrite(wIRWrite),
 		.writeA(wRegA),
 		.writeB(wRegB),
+		.regDst(wRegDst),
+		.regWrite(wRegWrite),
 		.aluSrcA(wAluSrcA),
 		.aluSrcB(wAluSrcB),
 		.aluControl(wALUControl),
 		.regAluControl(wRegALUControl),
 		.regDst(wRegDst),
-		.regWrite(wRegWrite),
+		.IorD(wIorD),		
 		.memToReg(wMemToReg),
 		.estado(wState)
-		);
+		); 
 		
 	Ula32 Ula
 	(	.A(wAOut),
@@ -83,7 +92,7 @@ module dataPath
 	(	.Clk(clock),
 		.Reset(res),
 		.Load(wPCControl),
-		.Entrada(wALUOut),
+		.Entrada(winPC),
 		.Saida(wPc)
 		);
 		
