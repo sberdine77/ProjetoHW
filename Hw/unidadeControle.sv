@@ -45,7 +45,7 @@ module unidadeControle
 	SW_step2,	//19
 	SW_step3_wait,	//20
 	Lui,	//21
-	J
+	J //22
 	} state;
 	
 	initial state <= Reset;
@@ -107,6 +107,30 @@ module unidadeControle
 	always_comb
 	begin
 		case(state)
+		Reset: begin estado <= state; end //0
+		MemoryRead: begin estado <= state; end //1
+		WaitMemoryRead: begin estado <= state; end //2
+		IRWrite: begin estado <= state; end //3
+		Decode: begin estado <= state; end//4
+		Add: begin estado <= state; end //5
+		And:  begin estado <= state; end//6
+		Sub: begin estado <= state; end //7
+		Xor:  begin estado <= state; end//8
+		Break: begin estado <= state; end //9
+		Nop: begin estado <= state; end //10
+		WriteRegAlu: begin estado <= state; end //11
+		Beq: begin estado <= state; end	//12
+		Bne: begin estado <= state; end	//13
+		LW:	 begin estado <= state; end	//14
+		LW_step2: begin estado <= state; end	//15
+		LW_step3_wait:	 begin estado <= state; end//16
+		LW_step4:	 begin estado <= state; end//17
+		SW:	 begin estado <= state; end	//18
+		SW_step2:	 begin estado <= state; end//19
+		SW_step3_wait: begin estado <= state; end	//20
+		Lui: begin estado <= state; end	//21
+		J: begin estado <= state; end
+		/*
 		Reset:
 		begin
 			memWriteOrRead = 1'b0;
@@ -417,7 +441,7 @@ module unidadeControle
 			origPC = 2'b00;
 			pcControl = 1'b1;
 			estado <= state;
-		end
+		end*/
 		endcase
 	end
 		
